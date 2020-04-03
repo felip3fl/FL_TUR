@@ -16,6 +16,5 @@ namespace FL_TUR
         {
             InitializeComponent();
         }
-
     }
 }
