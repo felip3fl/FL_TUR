@@ -10,14 +10,19 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Style="{StaticResource EstiloStackLayoutPadrao}">
-                <Label Style="{StaticResource LabelDescricao}" Text="Marque 5 número que não serão sorteados"></Label>
-                <controls:NumerosLotofacil VerticalOptions="FillAndExpand"/>
-                
-                    <Label Style="{StaticResource LabelResultado}" Text="04 05 06 07 09 11 15 17 19 20 21 22 23 24 25"/>
+                <Label Style="{StaticResource LabelDescricao}" Text="Marque 5 números que não serão sorteados"></Label>
+                <controls:NumerosLotofacil x:Name="NumerosLotofacil"
+                                           HeightRequest="600"
+                                           Margin="20,0"
+                                           />
+                <Label x:Name="lblNumerosSorteados" Style="{StaticResource LabelResultado}" 
+                       Text="&#10;&#10;&#10;"/>
                     <!--<Label Style="{StaticResource LabelResultado}" Text="04 05 06 07 09 &#10;11 15 17 19 20 &#10;21 22 23 24 25"/>-->
-                
+
+                <Button Text="Sortear números" Style="{StaticResource BotaoInferior}" Clicked="Button_Clicked"></Button>
+
             </StackLayout>
-        <Button Text="Sortear números" Style="{StaticResource BotaoInferior}"></Button>
+        
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
