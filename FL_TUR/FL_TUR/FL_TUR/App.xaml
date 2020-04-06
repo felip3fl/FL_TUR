@@ -10,60 +10,59 @@
 
             <Color x:Key="CorBotao">#9C27B0</Color>
             <Color x:Key="CorTextoBotao">White</Color>
-
-            <Style TargetType="Button">
-                <Setter Property="BackgroundColor" Value="{StaticResource CorBotao}" />
-                <Setter Property="TextColor" Value="{StaticResource CorTextoBotao}" />
-                <Setter Property="CornerRadius" Value="0" />
-                <!--<Setter Property="FontFamily" Value="Lobster-Regular.ttf#Lobster-Regular"/>-->
-            </Style>
-
-            <Style TargetType="StackLayout">
-                
-            </Style>
+            <Color x:Key="CorBotaoSorteio">#FAEEFB</Color>
+            <Color x:Key="CorTextoBotaoSorteio">#1F0723</Color>
+            <Color x:Key="CorBotaoSorteioMarcado">#1F0723</Color>
+            <Color x:Key="CorTextoBotaoSorteioMarcado">#FAEEFB</Color>
+            <Color x:Key="CorBotaoSorteioExcluido">#FFBFBF</Color>
+            <Color x:Key="CorTextoBotaoSorteioExcluido">#1F0723</Color>
+            <Color x:Key="CorTextoPadrao">#1F0723</Color>
             
             <Style TargetType="Button" x:Key="BotaoInferior">
-                <!--<Setter Property="Font" Value="Large" />-->
+                <Setter Property="MinimumHeightRequest" Value="45" />
+                <Setter Property="HeightRequest" Value="75" />
+                <Setter Property="BackgroundColor" Value="{StaticResource CorBotao}" />
+                <Setter Property="TextColor" Value="{StaticResource CorTextoBotao}" />
                 <Setter Property="VerticalOptions" Value="EndAndExpand"/>
-                <Setter Property="Padding" Value="28"/>
                 <Setter Property="Margin" Value="-1"/>
-                <!--<Setter Property="FontSize" Value="18" />-->
+                <Setter Property="CornerRadius" Value="0" />
             </Style>
 
-            <!--<Style TargetType="Grid" x:Key="ControlNumeros">
-                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
-                <Setter Property="BackgroundColor" Value="Blue"/>
-            </Style>-->
+            <Style TargetType="Grid" x:Key="ControlNumeros">
+                <Setter Property="MinimumHeightRequest" Value="220"/>
+                <Setter Property="HeightRequest" Value="330"/>
+                <Setter Property="Margin" Value="20,0"/>
+            </Style>
 
             <Style TargetType="Button" x:Key="BotoesSorteio">
-                <!--<Setter Property="FontSize" Value="25" />-->
                 <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="BackgroundColor" Value="{StaticResource CorBotaoSorteio}" />
+                <Setter Property="TextColor" Value="{StaticResource CorTextoBotaoSorteio}" />
             </Style>
 
             <Style TargetType="StackLayout" x:Key="EstiloStackLayoutPadrao">
-                <!--<Setter Property="BackgroundColor" Value="LightBlue" />-->
                 <Setter Property="VerticalOptions" Value="FillAndExpand" />
-                <!--<Setter Property="Margin" Value="0"/>
-                <Setter Property="Spacing" Value="0"/>-->
-                <!--<Setter Property="BackgroundColor" Value="LightSalmon"/>-->
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
             </Style>
 
             <Style TargetType="Label" x:Key="LabelResultado">
-                <Setter Property="TextColor" Value="Black" />
-                <Setter Property="FontSize" Value="62.5" /> <!--GALAXY S8-->
+                <!--<Setter Property="MinimumHeightRequest" Value="160" />-->
+                <Setter Property="HeightRequest" Value="230" />
+                <Setter Property="TextColor" Value="{StaticResource CorTextoPadrao}" />
                 <Setter Property="MaxLines" Value="3"/>
-                <!--<Setter Property="Margin" Value="10"/>-->
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
-                <Setter Property="VerticalOptions" Value="End" />
-                <!--<Setter Property="BackgroundColor" Value="LightPink"/>-->
-                <Setter Property="Margin" Value="20" />
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="20,0" />
+                <Setter Property="BackgroundColor" Value="LightGreen" />
             </Style>
 
             <Style TargetType="Label" x:Key="LabelDescricao">
+                <Setter Property="MinimumHeightRequest" Value="20" />
+                <Setter Property="HeightRequest" Value="100" />
                 <Setter Property="TextColor" Value="Black" />
-                <!--<Setter Property="FontSize" Value="20" />-->
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
-                <Setter Property="Margin" Value="30" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="Margin" Value="10" />
             </Style>
 
         </ResourceDictionary>

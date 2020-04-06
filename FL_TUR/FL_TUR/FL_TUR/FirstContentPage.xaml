@@ -8,21 +8,16 @@
              x:Class="FL_TUR.FirstContentPage">
 
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Style="{StaticResource EstiloStackLayoutPadrao}">
-                <Label Style="{StaticResource LabelDescricao}" Text="Marque 5 números que não serão sorteados"></Label>
-                <controls:NumerosLotofacil x:Name="NumerosLotofacil"
-                                           HeightRequest="600"
-                                           Margin="20,0"
-                                           />
-                <Label x:Name="lblNumerosSorteados" Style="{StaticResource LabelResultado}" 
-                       Text="&#10;&#10;&#10;"/>
-                    <!--<Label Style="{StaticResource LabelResultado}" Text="04 05 06 07 09 &#10;11 15 17 19 20 &#10;21 22 23 24 25"/>-->
+        <StackLayout x:Name="StackLayoutPadrao" Style="{StaticResource EstiloStackLayoutPadrao}">
+            <Label Style="{StaticResource LabelDescricao}" Text="Marque 5 números que não serão sorteados"></Label>
+            <controls:NumerosLotofacil x:Name="NumerosLotofacil"/>
 
-                <Button Text="Sortear números" Style="{StaticResource BotaoInferior}" Clicked="Button_Clicked"></Button>
+            <Label SizeChanged="StackLayoutPadrao_SizeChanged" x:Name="lblNumerosSorteados" Style="{StaticResource LabelResultado}" 
+                       Text="04 05 06 07 09 &#10;11 15 17 19 20 &#10;21 22 23 24 25"/>
+            <!--<Label Style="{StaticResource LabelResultado}" Text="04 05 06 07 09 &#10;11 15 17 19 20 &#10;21 22 23 24 25"/>-->
+            
+            <Button Text="Sortear números" Style="{StaticResource BotaoInferior}" Clicked="Button_Clicked"></Button>
 
-            </StackLayout>
-        
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -29,15 +29,26 @@ namespace FL_TUR.Control
 
             var resetBotoes = grid.Children.Cast<Button>();
             foreach (var item in resetBotoes)
-                item.BackgroundColor = (Color)Application.Current.Resources["CorBotao"];
+            {
+                item.BackgroundColor = (Color)Application.Current.Resources["CorBotaoSorteio"];
+                item.TextColor = (Color)Application.Current.Resources["CorTextoBotaoSorteio"];
+            }
 
             var botoesSelecionados = grid.Children.Cast<Button>().Where(c => numerosSorteadosClass.NumerosSorteados.Contains(Convert.ToInt32(c.Text)));
             foreach (var item in botoesSelecionados)
-                item.BackgroundColor = Color.Black;
+            {
+                item.BackgroundColor = (Color)Application.Current.Resources["CorBotaoSorteioMarcado"];
+                item.TextColor = (Color)Application.Current.Resources["CorTextoBotaoSorteioMarcado"];
+            }
+                
 
             var botoesExcluidos = grid.Children.Cast<Button>().Where(c => numerosExluidos.NumerosExcluidosDoSorteio.Contains(Convert.ToInt32(c.Text)));
             foreach (var item in botoesExcluidos)
-                item.BackgroundColor = Color.Red;
+            {
+                item.BackgroundColor = (Color)Application.Current.Resources["CorBotaoSorteioExcluido"];
+                item.TextColor = (Color)Application.Current.Resources["CorTextoBotaoSorteioExcluido"];
+            }
+                
 
         }
 
@@ -45,7 +56,7 @@ namespace FL_TUR.Control
         {
             var contador = 1;
 
-            //grid.Style = (Style)Application.Current.Resources["ControlNumeros"];
+            grid.Style = (Style)Application.Current.Resources["ControlNumeros"];
 
             for (int i = 0; i < 5; i++)
             {
@@ -76,12 +87,14 @@ namespace FL_TUR.Control
                 if (!numerosExluidos.NumerosExcluidosDoSorteio.Contains(numeroSelecionado))
                 {
                     numerosExluidos.AdicionarNumeroExcluido(numeroSelecionado);
-                    botao.BackgroundColor = Color.Red;
+                    botao.BackgroundColor = (Color)Application.Current.Resources["CorBotaoSorteioExcluido"]; ;
+                    botao.TextColor = (Color)Application.Current.Resources["CorTextoBotaoSorteioExcluido"]; ;
                 }
                 else
                 {
                     numerosExluidos.ExluirNumeroExcluido(numeroSelecionado);
-                    botao.BackgroundColor = (Color)Application.Current.Resources["CorBotao"];
+                    botao.BackgroundColor = (Color)Application.Current.Resources["CorBotaoSorteio"];
+                    botao.TextColor = (Color)Application.Current.Resources["CorTextoBotaoSorteio"];
                 }
             }
             catch (LimiteNumerosExluidosException)
