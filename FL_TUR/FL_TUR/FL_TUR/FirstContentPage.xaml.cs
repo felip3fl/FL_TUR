@@ -17,32 +17,31 @@ namespace FL_TUR
         {
             InitializeComponent();
             //OnContentViewSizeChanged(StackLayoutPadrao, lblNumerosSorteados);
-        }
+        } 
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-
             var numerosSorteados = new NumerosSorteadosClass();
-            numerosSorteados.NovoSorterio();
-
-            //StringBuilder numerosSorteados = new StringBuilder();
+            numerosSorteados.NovoSorterio(NumerosLotofacil.getNumerosExluidos());
 
             StringBuilder temp = new StringBuilder();
             var texto = numerosSorteados.getNumerosSorteadosOrdeado();
 
-            var linha1 = texto.Substring(0,14) + " ";
-            var linha2 = texto.Substring(15, 14) + " ";
-            var linha3 = texto.Substring(30, 14);
+            //var linha1 = texto.Substring(0,14) + " ";
+            //var linha2 = texto.Substring(15, 14) + " ";
+            //var linha3 = texto.Substring(30, 14);
 
             //var linha1 = temp.Insert(tamanho, "\n");
             //temp = temp.Insert((tamanho*2)+2, "\n");
 
-            lblNumerosSorteados.Text = linha1 + linha2 + linha3;
+            //REMOVIDO
+            //lblNumerosSorteados.Text = linha1 + linha2 + linha3;
+            //OnContentViewSizeChanged(StackLayoutPadrao, lblNumerosSorteados);
 
-            OnContentViewSizeChanged(StackLayoutPadrao, lblNumerosSorteados);
+            NumerosLotofacil.Atualizar(numerosSorteados);
+            ResultadoLotoFacil.ExibirResultadoTela(numerosSorteados);
 
-            NumerosLotofacil.Atualizar();
+            //NumerosLotofacil.Atualizar();
         }
 
         public void OnContentViewSizeChanged(View view, Label lblNumerosSorteados)
@@ -111,7 +110,8 @@ namespace FL_TUR
 
         private void StackLayoutPadrao_SizeChanged(object sender, EventArgs e)
         {
-            OnContentViewSizeChanged(StackLayoutPadrao, lblNumerosSorteados);
+            //REMOVIDO
+            //OnContentViewSizeChanged(StackLayoutPadrao, lblNumerosSorteados);
         }
     }
 }

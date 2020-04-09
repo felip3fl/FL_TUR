@@ -12,34 +12,36 @@ namespace FL_TUR.Services
 
         public List<int> NumerosSorteados { get => _numerosSorteados; }
 
-        //public void AdicionarNumeroExcluido(int numero)
-        //{
-        //    _numerosSorteados.Add(numero);
-        //}
-
         public void ExluirNumeroExcluido(int numero)
         {
             _numerosSorteados.Remove(numero);
         }
 
-        public void NovoSorterio()
+        public void NovoSorterio(List<int> numerosExluidos = null)
         {
             var rnd = new Random();
             var numeroSorteado = 1;
-            var numerosExluidos = new NumerosExluidos();
             var quantidadeNumeroSorteado = 0;
             _numerosSorteados.Clear();
 
             do
             {
                 numeroSorteado = rnd.Next(1, 26);
-                if (!numerosExluidos.NumerosExcluidosDoSorteio.Contains(numeroSorteado) && !_numerosSorteados.Contains(numeroSorteado)) 
+                if (numeroValido(numeroSorteado, numerosExluidos)) 
                 {
                     _numerosSorteados.Add(numeroSorteado);
                     quantidadeNumeroSorteado++;
                 }
                     
             } while (quantidadeNumeroSorteado < 15);
+        }
+
+        private bool numeroValido(int numeroSorteado, List<int> numerosExluidos)
+        {
+            if (numerosExluidos == null)
+                return !_numerosSorteados.Contains(numeroSorteado);
+            
+            return !numerosExluidos.Contains(numeroSorteado) && !_numerosSorteados.Contains(numeroSorteado);
         }
 
         public string getNumerosSorteadosOrdeado()
@@ -55,6 +57,11 @@ namespace FL_TUR.Services
             }
 
             return builder.ToString();
+        }
+
+        public List<int> getListNumerosSorteadosOrdeado()
+        {
+            return _numerosSorteados.OrderBy(x => x).ToList();
         }
 
     }

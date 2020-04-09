@@ -23,33 +23,46 @@ namespace FL_TUR.Control
             InitializeComponentGridSorteio();
         }
 
-        public void Atualizar()
+        private void ResetBotoes()
         {
-            var numerosSorteadosClass = new NumerosSorteadosClass();
-
             var resetBotoes = grid.Children.Cast<Button>();
+
             foreach (var item in resetBotoes)
             {
                 item.BackgroundColor = (Color)Application.Current.Resources["CorBotaoSorteio"];
                 item.TextColor = (Color)Application.Current.Resources["CorTextoBotaoSorteio"];
             }
+        }
 
+        private void AtualizarNumerosSorteados(NumerosSorteadosClass numerosSorteadosClass)
+        {
             var botoesSelecionados = grid.Children.Cast<Button>().Where(c => numerosSorteadosClass.NumerosSorteados.Contains(Convert.ToInt32(c.Text)));
             foreach (var item in botoesSelecionados)
             {
                 item.BackgroundColor = (Color)Application.Current.Resources["CorBotaoSorteioMarcado"];
                 item.TextColor = (Color)Application.Current.Resources["CorTextoBotaoSorteioMarcado"];
             }
-                
+        }
 
+        private void AtualizarNumerosExcluidos(NumerosExluidos numerosExluidos)
+        {
             var botoesExcluidos = grid.Children.Cast<Button>().Where(c => numerosExluidos.NumerosExcluidosDoSorteio.Contains(Convert.ToInt32(c.Text)));
             foreach (var item in botoesExcluidos)
             {
                 item.BackgroundColor = (Color)Application.Current.Resources["CorBotaoSorteioExcluido"];
                 item.TextColor = (Color)Application.Current.Resources["CorTextoBotaoSorteioExcluido"];
             }
-                
+        }
 
+        public void Atualizar(NumerosSorteadosClass numerosSorteadosClass = null)
+        {
+            ResetBotoes();
+
+            if (numerosSorteadosClass != null)
+                AtualizarNumerosExcluidos(numerosExluidos);
+
+            if (numerosExluidos != null)
+                AtualizarNumerosSorteados(numerosSorteadosClass);
         }
 
         public void InitializeComponentGridSorteio()
@@ -102,6 +115,11 @@ namespace FL_TUR.Control
                 App.Current.MainPage.DisplayAlert("Linmite de núemros excluidos", "Você selecionou o limite máximo de números que podem ser excluído.", "OK");
             }
 
+        }
+
+        public List<int> getNumerosExluidos()
+        {
+            return numerosExluidos.NumerosExcluidosDoSorteio;
         }
     }
 }

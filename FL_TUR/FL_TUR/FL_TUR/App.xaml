@@ -34,6 +34,23 @@
                 <Setter Property="Margin" Value="20,0"/>
             </Style>
 
+            <Style TargetType="Grid" x:Key="ControlGridResultadoLotoFacil">
+                <Setter Property="MinimumHeightRequest" Value="140"/>
+                <!--<Setter Property="HeightRequest" Value="120"/>-->
+                <Setter Property="Margin" Value="20,10,20,20"/>
+                <Setter Property="RowSpacing" Value="0"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="ControlLabelResultadoLotoFacil">
+                <!--<Setter Property="BackgroundColor" Value="LightSalmon"/>-->
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalTextAlignment" Value="Start"/>
+                <Setter Property="FontSize" Value="45"/>
+                <Setter Property="MinimumHeightRequest" Value="80"/>
+                <!--<Setter Property="MinimumHeightRequest" Value="300"/>-->
+                <Setter Property="TextColor" Value="{StaticResource CorTextoPadrao}" />
+            </Style>
+
             <Style TargetType="Button" x:Key="BotoesSorteio">
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="BackgroundColor" Value="{StaticResource CorBotaoSorteio}" />
@@ -43,6 +60,7 @@
             <Style TargetType="StackLayout" x:Key="EstiloStackLayoutPadrao">
                 <Setter Property="VerticalOptions" Value="FillAndExpand" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <!--<Setter Property="BackgroundColor" Value="#F2F2F2" />-->
             </Style>
 
             <Style TargetType="Label" x:Key="LabelResultado">
@@ -58,11 +76,14 @@
 
             <Style TargetType="Label" x:Key="LabelDescricao">
                 <Setter Property="MinimumHeightRequest" Value="20" />
-                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="HeightRequest" Value="190" />
                 <Setter Property="TextColor" Value="Black" />
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="VerticalTextAlignment" Value="Center" />
                 <Setter Property="Margin" Value="10" />
+                <Setter Property="MaxLines" Value="2" />
+                <Setter Property="FontSize" Value="Title" />
+                <Setter Property="FontFamily" Value="Lobster-Regular" />
             </Style>
 
         </ResourceDictionary>
