@@ -9,10 +9,7 @@ namespace FL_TUR
         public App()
         {
             InitializeComponent();
-
-            
             MainPage = new FL_TUR.FirstContentPage();
-            MainPage.SetValue(NavigationPage.BarBackgroundColorProperty, Color.Black);
         }
 
         protected override void OnStart()
