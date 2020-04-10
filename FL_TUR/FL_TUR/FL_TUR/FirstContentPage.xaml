@@ -10,15 +10,21 @@
     <ContentPage.Content>
         
         <StackLayout x:Name="StackLayoutPadrao" Style="{StaticResource EstiloStackLayoutPadrao}">
+            <FlexLayout x:Name="StackLayoutDescricao" Style="{StaticResource StackLayoutDescricao}">
+                <Label Style="{StaticResource LabelDescricao}" Text="Marque até 5 números para tirar do sorteio"></Label>
+                <Label Style="{StaticResource LabelDescricaoSecundaria}" Text="Serão sorteado 15 números"></Label>
+            </FlexLayout>
 
-            <Label Style="{StaticResource LabelDescricao}" Text="Marque 5 números que não serão sorteados"></Label>
+            <StackLayout 
+                BackgroundColor="White" 
+                VerticalOptions="FillAndExpand"
+                Margin="0,20,0,0"
+                >
+                <controls:NumerosLotofacil x:Name="NumerosLotofacil"/>
+                <controls:ResultadoLotoFacil x:Name="ResultadoLotoFacil"/>
 
-            <controls:NumerosLotofacil x:Name="NumerosLotofacil"/>
-
-            <controls:ResultadoLotoFacil x:Name="ResultadoLotoFacil"/>
-            
-            <Button Text="Sortear números" Style="{StaticResource BotaoInferior}" Clicked="Button_Clicked"></Button>
-
+                <Button Text="Sortear números" Style="{StaticResource BotaoInferior}" Clicked="Button_Clicked"></Button>
+            </StackLayout>
         </StackLayout>
         
     </ContentPage.Content>

@@ -17,6 +17,10 @@
             <Color x:Key="CorBotaoSorteioExcluido">#FFBFBF</Color>
             <Color x:Key="CorTextoBotaoSorteioExcluido">#1F0723</Color>
             <Color x:Key="CorTextoPadrao">#1F0723</Color>
+
+            <OnPlatform x:TypeArguments="x:String" x:Key="NormalFont">
+                <On Platform="Android" Value="Roboto-Light.ttf#Sedgwick Ave Display" />
+            </OnPlatform>
             
             <Style TargetType="Button" x:Key="BotaoInferior">
                 <Setter Property="MinimumHeightRequest" Value="45" />
@@ -30,14 +34,14 @@
 
             <Style TargetType="Grid" x:Key="ControlNumeros">
                 <Setter Property="MinimumHeightRequest" Value="220"/>
-                <Setter Property="HeightRequest" Value="330"/>
-                <Setter Property="Margin" Value="20,0"/>
+                <Setter Property="HeightRequest" Value="220"/>
+                <Setter Property="Margin" Value="30,10,30,0"/>
             </Style>
 
             <Style TargetType="Grid" x:Key="ControlGridResultadoLotoFacil">
-                <Setter Property="MinimumHeightRequest" Value="140"/>
-                <!--<Setter Property="HeightRequest" Value="120"/>-->
-                <Setter Property="Margin" Value="20,10,20,20"/>
+                <Setter Property="MinimumHeightRequest" Value="150"/>
+                <Setter Property="HeightRequest" Value="150"/>
+                <Setter Property="Margin" Value="30,10,30,30"/>
                 <Setter Property="RowSpacing" Value="0"/>
             </Style>
 
@@ -63,27 +67,44 @@
                 <!--<Setter Property="BackgroundColor" Value="#F2F2F2" />-->
             </Style>
 
-            <Style TargetType="Label" x:Key="LabelResultado">
-                <!--<Setter Property="MinimumHeightRequest" Value="160" />-->
+            <!--<Style TargetType="Label" x:Key="LabelResultado">
+                --><!--<Setter Property="MinimumHeightRequest" Value="160" />--><!--
                 <Setter Property="HeightRequest" Value="230" />
                 <Setter Property="TextColor" Value="{StaticResource CorTextoPadrao}" />
                 <Setter Property="MaxLines" Value="3"/>
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
                 <Setter Property="VerticalTextAlignment" Value="Center"/>
-                <Setter Property="Margin" Value="20,0" />
+                <Setter Property="Margin" Value="30,0" />
                 <Setter Property="BackgroundColor" Value="LightGreen" />
-            </Style>
+            </Style>-->
 
             <Style TargetType="Label" x:Key="LabelDescricao">
-                <Setter Property="MinimumHeightRequest" Value="20" />
-                <Setter Property="HeightRequest" Value="190" />
-                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="TextColor" Value="{StaticResource CorTextoPadrao}" />
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
-                <Setter Property="VerticalTextAlignment" Value="Center" />
-                <Setter Property="Margin" Value="10" />
+                <Setter Property="Margin" Value="30,0" />
                 <Setter Property="MaxLines" Value="2" />
-                <Setter Property="FontSize" Value="Title" />
-                <Setter Property="FontFamily" Value="Lobster-Regular" />
+                <Setter Property="FontSize" Value="32" />
+                <Setter Property="FontFamily" Value="{StaticResource NormalFont}" />
+                
+                
+            </Style>
+
+            <Style TargetType="FlexLayout" x:Key="StackLayoutDescricao">
+                <Setter Property="MinimumHeightRequest" Value="100" />
+                <Setter Property="HeightRequest" Value="400" />
+                <!--<Setter Property="BackgroundColor" Value="LightSalmon" />-->
+                <Setter Property="AlignContent" Value="Center" />
+                <Setter Property="Direction" Value="Column" />
+                <Setter Property="JustifyContent" Value="Center" />
+                <Setter Property="BackgroundColor" Value="#F2F2F2" />
+            </Style>
+
+            <Style TargetType="Label" x:Key="LabelDescricaoSecundaria">
+                <Setter Property="TextColor" Value="{StaticResource CorTextoPadrao}" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="MaxLines" Value="1" />
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="FontFamily" Value="{StaticResource NormalFont}" />
             </Style>
 
         </ResourceDictionary>

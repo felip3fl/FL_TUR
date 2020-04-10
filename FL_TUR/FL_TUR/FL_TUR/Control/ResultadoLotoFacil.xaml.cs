@@ -33,7 +33,7 @@ namespace FL_TUR.Control
                 {
                     grid.Children.Add(new Label
                     {
-                        Text = contador.ToString("00"),
+                        Text = "-",
                         ClassId = contador++.ToString(),
                         Style = (Style)Application.Current.Resources["ControlLabelResultadoLotoFacil"]
                 }, j, i); ;

@@ -6,35 +6,9 @@
              mc:Ignorable="d"
              x:Class="FL_TUR.MainPage">
 
-    <StackLayout>
+    <StackLayout BackgroundColor="Purple">
 
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <!--Define as colunas-->
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            
-            <Grid.RowDefinitions>
-                <!--Define as Linhas-->
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-
-            <BoxView Grid.Column="0" Grid.Row ="0"  BackgroundColor="Blue" CornerRadius="100"/>
-            <BoxView Grid.Column="1" Grid.Row ="0"  BackgroundColor="Blue" />
-            <BoxView Grid.Column="2" Grid.Row ="0"  BackgroundColor="Blue" />
-            <BoxView Grid.Column="3" Grid.Row ="0"  BackgroundColor="Blue" />
-
-            <!--<BoxView Grid.Column="2" Grid.Row ="0"  BackgroundColor="Blue" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-            <BoxView Grid.Column="0" Grid.ColumnSpan="3" Grid.Row ="1"  BackgroundColor="Yellow" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-            <BoxView Grid.Column="0" Grid.Row ="2" Grid.ColumnSpan="2" BackgroundColor="Red" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>-->
-
-        </Grid>
+        <Label Text="OI"/>
 
     </StackLayout>
 

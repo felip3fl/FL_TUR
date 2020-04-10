@@ -9,9 +9,6 @@ namespace FL_TUR
         public MainPage()
         {
             InitializeComponent();
-            
-
-
         }
 
     }

@@ -26,6 +26,11 @@ namespace FL_TUR.Data
         {
             _numerosExcluidosDoSorteio.Remove(numero);
         }
+
+        public int QuantidadeDeNumerosRestante()
+        {
+            return _numerosExcluidosDoSorteio.Count() - _limiteNumerosExluidos;
+        }
     }
 
 

@@ -26,7 +26,7 @@ namespace FL_TUR.Droid
             Window window = this.Window;
             //window.ClearFlags(WindowManagerFlags.TranslucentStatus);
             //window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
-            window.SetStatusBarColor(Android.Graphics.Color.Transparent);
+            window.SetStatusBarColor(Android.Graphics.Color.Rgb(242,242,242));
             
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
