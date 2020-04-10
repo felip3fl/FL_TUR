@@ -35,7 +35,7 @@
             <Style TargetType="Grid" x:Key="ControlNumeros">
                 <Setter Property="MinimumHeightRequest" Value="220"/>
                 <Setter Property="HeightRequest" Value="220"/>
-                <Setter Property="Margin" Value="30,10,30,0"/>
+                <Setter Property="Margin" Value="30,30,30,0"/>
             </Style>
 
             <Style TargetType="Grid" x:Key="ControlGridResultadoLotoFacil">
@@ -64,7 +64,7 @@
             <Style TargetType="StackLayout" x:Key="EstiloStackLayoutPadrao">
                 <Setter Property="VerticalOptions" Value="FillAndExpand" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <!--<Setter Property="BackgroundColor" Value="#F2F2F2" />-->
+                <Setter Property="BackgroundColor" Value="#F2F2F2" />
             </Style>
 
             <!--<Style TargetType="Label" x:Key="LabelResultado">

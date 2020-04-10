@@ -5,26 +5,28 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              xmlns:controls="clr-namespace:FL_TUR.Control"
-             x:Class="FL_TUR.FirstContentPage">
+             x:Class="FL_TUR.FirstContentPage"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             >
 
     <ContentPage.Content>
         
         <StackLayout x:Name="StackLayoutPadrao" Style="{StaticResource EstiloStackLayoutPadrao}">
+            
             <FlexLayout x:Name="StackLayoutDescricao" Style="{StaticResource StackLayoutDescricao}">
                 <Label Style="{StaticResource LabelDescricao}" Text="Marque até 5 números para tirar do sorteio"></Label>
                 <Label Style="{StaticResource LabelDescricaoSecundaria}" Text="Serão sorteado 15 números"></Label>
             </FlexLayout>
 
-            <StackLayout 
-                BackgroundColor="White" 
-                VerticalOptions="FillAndExpand"
-                Margin="0,20,0,0"
-                >
-                <controls:NumerosLotofacil x:Name="NumerosLotofacil"/>
-                <controls:ResultadoLotoFacil x:Name="ResultadoLotoFacil"/>
+            <pancake:PancakeView CornerRadius="30,30,0,0" BorderThickness="1" Margin="-1" BorderColor="#E4E4E4" BackgroundColor="White">
+                    <StackLayout>
+                    <controls:NumerosLotofacil x:Name="NumerosLotofacil"/>
+                    <controls:ResultadoLotoFacil x:Name="ResultadoLotoFacil"/>
 
-                <Button Text="Sortear números" Style="{StaticResource BotaoInferior}" Clicked="Button_Clicked"></Button>
-            </StackLayout>
+                    <Button Text="Sortear números" Style="{StaticResource BotaoInferior}" Clicked="Button_Clicked"></Button>
+                        </StackLayout>
+                </pancake:PancakeView>
+
         </StackLayout>
         
     </ContentPage.Content>
