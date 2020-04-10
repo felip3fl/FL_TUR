@@ -18,15 +18,17 @@
                 <Label Style="{StaticResource LabelDescricaoSecundaria}" Text="Serão sorteado 15 números"></Label>
             </FlexLayout>
 
-            <pancake:PancakeView CornerRadius="30,30,0,0" BorderThickness="1" Margin="-1" BorderColor="#E4E4E4" BackgroundColor="White">
+            <pancake:PancakeView Style="{StaticResource PancakeViewCorpo}">
                     <StackLayout>
-                    <controls:NumerosLotofacil x:Name="NumerosLotofacil"/>
-                    <controls:ResultadoLotoFacil x:Name="ResultadoLotoFacil"/>
+                        <controls:NumerosLotofacil x:Name="NumerosLotofacil"/>
+                        <controls:ResultadoLotoFacil x:Name="ResultadoLotoFacil"/>
 
-                    <Button Text="Sortear números" Style="{StaticResource BotaoInferior}" Clicked="Button_Clicked"></Button>
-                        </StackLayout>
-                </pancake:PancakeView>
+                    
+                </StackLayout>
+             </pancake:PancakeView>
 
+            <Button Text="Sortear números" Style="{StaticResource BotaoInferior}" Clicked="Button_Clicked"></Button>
+            
         </StackLayout>
         
     </ContentPage.Content>

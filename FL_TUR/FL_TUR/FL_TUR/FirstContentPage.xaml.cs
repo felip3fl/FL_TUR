@@ -16,7 +16,6 @@ namespace FL_TUR
         public FirstContentPage()
         {
             InitializeComponent();
-            //OnContentViewSizeChanged(StackLayoutPadrao, lblNumerosSorteados);
         } 
 
         private void Button_Clicked(object sender, EventArgs e)
