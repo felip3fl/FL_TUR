@@ -14,6 +14,8 @@ namespace FL_TUR.Control
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NumerosLotofacil : ContentView
     {
+        public event EventHandler AtualizaQuantidadeNumeros;
+
         Grid grid = new Grid();
         NumerosExluidos numerosExluidos = new NumerosExluidos();
 
@@ -100,8 +102,8 @@ namespace FL_TUR.Control
                 if (!numerosExluidos.NumerosExcluidosDoSorteio.Contains(numeroSelecionado))
                 {
                     numerosExluidos.AdicionarNumeroExcluido(numeroSelecionado);
-                    botao.BackgroundColor = (Color)Application.Current.Resources["CorBotaoSorteioExcluido"]; ;
-                    botao.TextColor = (Color)Application.Current.Resources["CorTextoBotaoSorteioExcluido"]; ;
+                    botao.BackgroundColor = (Color)Application.Current.Resources["CorBotaoSorteioExcluido"]; 
+                    botao.TextColor = (Color)Application.Current.Resources["CorTextoBotaoSorteioExcluido"];
                 }
                 else
                 {
@@ -109,6 +111,8 @@ namespace FL_TUR.Control
                     botao.BackgroundColor = (Color)Application.Current.Resources["CorBotaoSorteio"];
                     botao.TextColor = (Color)Application.Current.Resources["CorTextoBotaoSorteio"];
                 }
+
+                AtualizaQuantidadeNumeros(this, null);
             }
             catch (LimiteNumerosExluidosException)
             {
@@ -120,6 +124,11 @@ namespace FL_TUR.Control
         public List<int> getNumerosExluidos()
         {
             return numerosExluidos.NumerosExcluidosDoSorteio;
+        }
+
+        public int QuantidadeDeNumerosRestante()
+        {
+            return numerosExluidos.QuantidadeDeNumerosRestante();
         }
     }
 }

@@ -18,8 +18,10 @@ namespace FL_TUR
             InitializeComponent();
         } 
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
+            await ResultadoLotoFacil.ScaleTo(1.05, 50);
+
             var numerosSorteados = new NumerosSorteadosClass();
             numerosSorteados.NovoSorterio(NumerosLotofacil.getNumerosExluidos());
 
@@ -39,6 +41,8 @@ namespace FL_TUR
 
             NumerosLotofacil.Atualizar(numerosSorteados);
             ResultadoLotoFacil.ExibirResultadoTela(numerosSorteados);
+            
+            await ResultadoLotoFacil.ScaleTo(1, 200);
 
             //NumerosLotofacil.Atualizar();
         }
@@ -111,6 +115,23 @@ namespace FL_TUR
         {
             //REMOVIDO
             //OnContentViewSizeChanged(StackLayoutPadrao, lblNumerosSorteados);
+        }
+
+        private void AtualizaDescricaoPrimaria()
+        {
+            var quantidadeNumeros = NumerosLotofacil.QuantidadeDeNumerosRestante();
+
+            if (quantidadeNumeros == 1)
+                lblDescricaoPrimaria.Text = $"Marque mais 1 número para remover do sorteio";
+            else if (quantidadeNumeros < 1)
+                lblDescricaoPrimaria.Text = $"Você não pode remover mais números do sorteio";
+            else
+                lblDescricaoPrimaria.Text = $"Marque até {quantidadeNumeros} números para remover do sorteio";
+        }
+
+        private void NumerosLotofacil_AtualizaQuantidadeNumeros(object sender, EventArgs e)
+        {
+            AtualizaDescricaoPrimaria();
         }
     }
 }

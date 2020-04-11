@@ -29,7 +29,7 @@ namespace FL_TUR.Data
 
         public int QuantidadeDeNumerosRestante()
         {
-            return _numerosExcluidosDoSorteio.Count() - _limiteNumerosExluidos;
+            return _limiteNumerosExluidos - _numerosExcluidosDoSorteio.Count();
         }
     }
 

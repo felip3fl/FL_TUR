@@ -14,6 +14,8 @@ namespace FL_TUR.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            Window.SetStatusBarColor(Android.Graphics.Color.Rgb(242, 242, 242));
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
@@ -22,12 +24,6 @@ namespace FL_TUR.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
-
-            Window window = this.Window;
-            //window.ClearFlags(WindowManagerFlags.TranslucentStatus);
-            //window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
-            window.SetStatusBarColor(Android.Graphics.Color.Rgb(242,242,242));
-            
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
