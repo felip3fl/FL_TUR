@@ -9,7 +9,7 @@ namespace FL_TUR
         public App()
         {
             InitializeComponent();
-            MainPage = new FL_TUR.FirstContentPage();
+            MainPage = new FL_TUR.View.Inicio();
         }
 
         protected override void OnStart()

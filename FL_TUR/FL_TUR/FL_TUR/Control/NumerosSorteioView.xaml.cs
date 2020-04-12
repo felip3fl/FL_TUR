@@ -12,14 +12,14 @@ using Xamarin.Forms.Xaml;
 namespace FL_TUR.Control
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NumerosLotofacil : ContentView
+    public partial class NumerosSorteioView : ContentView
     {
         public event EventHandler AtualizaQuantidadeNumeros;
 
         Grid grid = new Grid();
-        NumerosExluidos numerosExluidos = new NumerosExluidos();
+        NumerosExluidosClass numerosExluidos = new NumerosExluidosClass();
 
-        public NumerosLotofacil()
+        public NumerosSorteioView()
         {
             InitializeComponent();
             InitializeComponentGridSorteio();
@@ -46,7 +46,7 @@ namespace FL_TUR.Control
             }
         }
 
-        private void AtualizarNumerosExcluidos(NumerosExluidos numerosExluidos)
+        private void AtualizarNumerosExcluidos(NumerosExluidosClass numerosExluidos)
         {
             var botoesExcluidos = grid.Children.Cast<Button>().Where(c => numerosExluidos.NumerosExcluidosDoSorteio.Contains(Convert.ToInt32(c.Text)));
             foreach (var item in botoesExcluidos)

@@ -11,11 +11,11 @@ using Xamarin.Forms.Xaml;
 namespace FL_TUR.Control
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ResultadoLotoFacil : ContentView
+    public partial class ResultadoSorteioView : ContentView
     {
         Grid grid = new Grid();
 
-        public ResultadoLotoFacil()
+        public ResultadoSorteioView()
         {
             InitializeComponent();
             CriarComponentes();

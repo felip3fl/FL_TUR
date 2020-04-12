@@ -8,22 +8,22 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace FL_TUR
+namespace FL_TUR.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class FirstContentPage : ContentPage
+    public partial class Inicio : ContentPage
     {
-        public FirstContentPage()
+        public Inicio()
         {
             InitializeComponent();
         } 
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await ResultadoLotoFacil.ScaleTo(1.05, 50);
+            await ResultadoSorteioView.ScaleTo(1.05, 50);
 
             var numerosSorteados = new NumerosSorteadosClass();
-            numerosSorteados.NovoSorterio(NumerosLotofacil.getNumerosExluidos());
+            numerosSorteados.NovoSorterio(NumerosSorteioView.getNumerosExluidos());
 
             StringBuilder temp = new StringBuilder();
             var texto = numerosSorteados.getNumerosSorteadosOrdeado();
@@ -39,44 +39,44 @@ namespace FL_TUR
             //lblNumerosSorteados.Text = linha1 + linha2 + linha3;
             //OnContentViewSizeChanged(StackLayoutPadrao, lblNumerosSorteados);
 
-            NumerosLotofacil.Atualizar(numerosSorteados);
-            ResultadoLotoFacil.ExibirResultadoTela(numerosSorteados);
+            NumerosSorteioView.Atualizar(numerosSorteados);
+            ResultadoSorteioView.ExibirResultadoTela(numerosSorteados);
             
-            await ResultadoLotoFacil.ScaleTo(1, 200);
+            await ResultadoSorteioView.ScaleTo(1, 200);
 
             //NumerosLotofacil.Atualizar();
         }
 
-        public void OnContentViewSizeChanged(View view, Label lblNumerosSorteados)
-        {
-            string text = lblNumerosSorteados.Text;
+        //public void OnContentViewSizeChanged(View view, Label lblNumerosSorteados)
+        //{
+        //    string text = lblNumerosSorteados.Text;
 
-            // Get View whose size is changing.
-            //View view = (View)sender;
+        //    // Get View whose size is changing.
+        //    //View view = (View)sender;
 
-            // Define two values as multiples of font size.
-            double lineHeight = Device.RuntimePlatform == Device.iOS ||
-                                Device.RuntimePlatform == Device.Android ? 1.2 : 1.3;
+        //    // Define two values as multiples of font size.
+        //    double lineHeight = Device.RuntimePlatform == Device.iOS ||
+        //                        Device.RuntimePlatform == Device.Android ? 1.2 : 1.3;
 
-            double charWidth = 0.5;
+        //    double charWidth = 0.5;
 
-            // Format the text and get its character length.
-            //text = String.Format(text, lineHeight, charWidth, lblNumerosSorteados.Width, lblNumerosSorteados.Height);
+        //    // Format the text and get its character length.
+        //    //text = String.Format(text, lineHeight, charWidth, lblNumerosSorteados.Width, lblNumerosSorteados.Height);
 
-            int charCount = text.Length;
+        //    int charCount = text.Length;
             
-            // Because:
-            //   lineCount = view.Height / (lineHeight * fontSize)
-            //   charsPerLine = view.Width / (charWidth * fontSize)
-            //   charCount = lineCount * charsPerLine
-            // Hence, solving for fontSize:
-            int fontSize = (int)Math.Sqrt(lblNumerosSorteados.Width * lblNumerosSorteados.Height /
-                            (charCount * lineHeight * charWidth));
+        //    // Because:
+        //    //   lineCount = view.Height / (lineHeight * fontSize)
+        //    //   charsPerLine = view.Width / (charWidth * fontSize)
+        //    //   charCount = lineCount * charsPerLine
+        //    // Hence, solving for fontSize:
+        //    int fontSize = (int)Math.Sqrt(lblNumerosSorteados.Width * lblNumerosSorteados.Height /
+        //                    (charCount * lineHeight * charWidth));
 
-            // Set the Label properties.
-            lblNumerosSorteados.Text = text;
-            lblNumerosSorteados.FontSize = fontSize;
-        }
+        //    // Set the Label properties.
+        //    lblNumerosSorteados.Text = text;
+        //    lblNumerosSorteados.FontSize = fontSize;
+        //}
 
         public void OnContentViewSizeChanged2(Label lblNumerosSorteados)
         {
@@ -119,7 +119,7 @@ namespace FL_TUR
 
         private void AtualizaDescricaoPrimaria()
         {
-            var quantidadeNumeros = NumerosLotofacil.QuantidadeDeNumerosRestante();
+            var quantidadeNumeros = NumerosSorteioView.QuantidadeDeNumerosRestante();
 
             if (quantidadeNumeros == 1)
                 lblDescricaoPrimaria.Text = $"Marque mais 1 número para remover do sorteio";

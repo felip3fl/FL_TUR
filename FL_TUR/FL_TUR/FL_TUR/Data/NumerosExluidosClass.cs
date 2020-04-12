@@ -6,7 +6,7 @@ using System.Text;
 
 namespace FL_TUR.Data
 {
-    public class NumerosExluidos
+    public class NumerosExluidosClass
     {
         private int _limiteNumerosExluidos = 5;
 
