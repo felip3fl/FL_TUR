@@ -30,22 +30,28 @@
                 <On Platform="Android" Value="Roboto-Regular.ttf#Sedgwick Ave Display" />
             </OnPlatform>
 
+            <OnPlatform x:TypeArguments="x:Int32" x:Key="ArredondamentoBordaBotao">
+                <On Platform="Android" Value="50" />
+                <On Platform="IOS" Value="50" />
+                <On Platform="UWP" Value="20" />
+            </OnPlatform>
+
             <OnPlatform x:TypeArguments="x:String" x:Key="BoldFont">
                 <On Platform="Android" Value="Roboto-Bold.ttf#Sedgwick Ave Display" />
                 <On Platform="UWP" Value="Roboto-Bold.ttf#Sedgwick Ave Display" />
-                <On Platform="Android" Value="Roboto-Bold.ttf#Sedgwick Ave Display" />
+                <On Platform="IOS" Value="Roboto-Bold.ttf#Sedgwick Ave Display" />
             </OnPlatform>
 
             <OnPlatform x:TypeArguments="x:String" x:Key="LightFont">
                 <On Platform="Android" Value="Roboto-Light.ttf#Sedgwick Ave Display" />
                 <On Platform="UWP" Value="Roboto-Light.ttf#Sedgwick Ave Display" />
-                <On Platform="Android" Value="Roboto-Light.ttf#Sedgwick Ave Display" />
+                <On Platform="IOS" Value="Roboto-Light.ttf#Sedgwick Ave Display" />
             </OnPlatform>
 
             <OnPlatform x:TypeArguments="x:String" x:Key="ThinFont">
                 <On Platform="Android" Value="Roboto-Thin.ttf#Sedgwick Ave Display" />
                 <On Platform="UWP" Value="Roboto-Thin.ttf#Sedgwick Ave Display" />
-                <On Platform="Android" Value="Roboto-Thin.ttf#Sedgwick Ave Display" />
+                <On Platform="IOS" Value="Roboto-Thin.ttf#Sedgwick Ave Display" />
             </OnPlatform>
 
             <Style TargetType="StackLayout" x:Key="EstiloStackLayoutPadrao">
@@ -108,7 +114,7 @@
 
             <Style TargetType="pancake:PancakeView" x:Key="PancakeViewCorpo">
                 <Setter Property="Padding" Value="30" />
-                <Setter Property="Margin" Value="-1,0,-1,-4" />
+                <Setter Property="Margin" Value="-1,0,-1,-6" />
                 <Setter Property="CornerRadius" Value="30,30,0,0" />
                 <Setter Property="BorderThickness" Value="1" />
                 <Setter Property="BorderColor" Value="#E4E4E4" />
@@ -119,12 +125,18 @@
                 <Setter Property="Margin" Value="0,0,0,10"/>
                 <Setter Property="MinimumHeightRequest" Value="220"/>
                 <Setter Property="HeightRequest" Value="220"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="StackLayout" x:Key="StackLayoutCorpo">
+                <Setter Property="BackgroundColor" Value="Red"/>
             </Style>
 
             <Style TargetType="Button" x:Key="BotoesSorteio">
                 <Setter Property="BackgroundColor" Value="{StaticResource CorBotaoSorteio}" />
                 <Setter Property="TextColor" Value="{StaticResource CorTextoBotaoSorteio}" />
-                <Setter Property="CornerRadius" Value="50" />
+                <Setter Property="CornerRadius" Value="{StaticResource ArredondamentoBordaBotao}" />
+                <Setter Property="CornerRadius" Value="{StaticResource ArredondamentoBordaBotao}" />
             </Style>
 
             <Style TargetType="Grid" x:Key="ControlGridResultadoLotoFacil">
@@ -132,6 +144,7 @@
                 <Setter Property="MinimumHeightRequest" Value="150"/>
                 <Setter Property="HeightRequest" Value="150"/>
                 <Setter Property="RowSpacing" Value="0"/>
+                <Setter Property="BackgroundColor" Value="White"/>
             </Style>
 
             <!--#endregion-->
@@ -139,7 +152,7 @@
             <!--#region FIM - Botão inferior, Botão sorteio -->
 
             <Style TargetType="Button" x:Key="BotaoInferior">
-                <Setter Property="Margin" Value="-1"/>
+                <Setter Property="Margin" Value="-2"/>
                 <Setter Property="MinimumHeightRequest" Value="45" />
                 <Setter Property="HeightRequest" Value="85" />
                 <Setter Property="BackgroundColor" Value="{StaticResource CorBotao}" />
