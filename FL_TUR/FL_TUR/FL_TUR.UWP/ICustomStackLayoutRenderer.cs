@@ -24,7 +24,7 @@ namespace FL_TUR.UWP
             {
                 var brush = Windows.UI.Xaml.Application.Current.Resources["SystemControlAltHighAcrylicWindowBrush"] as AcrylicBrush;
                 brush.TintColor = Colors.White;
-                brush.TintOpacity = 0.7;
+                brush.TintOpacity = 0.8;
                 var fallbackColor = brush.FallbackColor;
                 var source = brush.BackgroundSource;
                 this.Background = brush;
