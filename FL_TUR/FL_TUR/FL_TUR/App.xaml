@@ -136,7 +136,8 @@
                 <Setter Property="BackgroundColor" Value="{StaticResource CorBotaoSorteio}" />
                 <Setter Property="TextColor" Value="{StaticResource CorTextoBotaoSorteio}" />
                 <Setter Property="CornerRadius" Value="{StaticResource ArredondamentoBordaBotao}" />
-                <Setter Property="CornerRadius" Value="{StaticResource ArredondamentoBordaBotao}" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="Margin" Value="0" />
             </Style>
 
             <Style TargetType="Grid" x:Key="ControlGridResultadoLotoFacil">
