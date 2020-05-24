@@ -81,6 +81,11 @@
             
             <!--#region TOPO - Descrição inicial do APP -->
 
+            <Style TargetType="Label" x:Key="TituloAplicacaoUWP">
+                <Setter Property="Margin" Value="8,8,0,0" />
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+
             <Style TargetType="FlexLayout" x:Key="StackLayoutDescricao">
                 <Setter Property="MinimumHeightRequest" Value="70" /> <!--POSITIVO TWIST-->
                 <Setter Property="HeightRequest" Value="400" />
