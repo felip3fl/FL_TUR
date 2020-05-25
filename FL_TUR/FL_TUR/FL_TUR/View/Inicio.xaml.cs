@@ -28,55 +28,11 @@ namespace FL_TUR.View
             StringBuilder temp = new StringBuilder();
             var texto = numerosSorteados.getNumerosSorteadosOrdeado();
 
-            //var linha1 = texto.Substring(0,14) + " ";
-            //var linha2 = texto.Substring(15, 14) + " ";
-            //var linha3 = texto.Substring(30, 14);
-
-            //var linha1 = temp.Insert(tamanho, "\n");
-            //temp = temp.Insert((tamanho*2)+2, "\n");
-
-            //REMOVIDO
-            //lblNumerosSorteados.Text = linha1 + linha2 + linha3;
-            //OnContentViewSizeChanged(StackLayoutPadrao, lblNumerosSorteados);
-
             NumerosSorteioView.Atualizar(numerosSorteados);
             ResultadoSorteioView.ExibirResultadoTela(numerosSorteados);
             
             await ResultadoSorteioView.ScaleTo(1, 200);
-
-            //NumerosLotofacil.Atualizar();
         }
-
-        //public void OnContentViewSizeChanged(View view, Label lblNumerosSorteados)
-        //{
-        //    string text = lblNumerosSorteados.Text;
-
-        //    // Get View whose size is changing.
-        //    //View view = (View)sender;
-
-        //    // Define two values as multiples of font size.
-        //    double lineHeight = Device.RuntimePlatform == Device.iOS ||
-        //                        Device.RuntimePlatform == Device.Android ? 1.2 : 1.3;
-
-        //    double charWidth = 0.5;
-
-        //    // Format the text and get its character length.
-        //    //text = String.Format(text, lineHeight, charWidth, lblNumerosSorteados.Width, lblNumerosSorteados.Height);
-
-        //    int charCount = text.Length;
-            
-        //    // Because:
-        //    //   lineCount = view.Height / (lineHeight * fontSize)
-        //    //   charsPerLine = view.Width / (charWidth * fontSize)
-        //    //   charCount = lineCount * charsPerLine
-        //    // Hence, solving for fontSize:
-        //    int fontSize = (int)Math.Sqrt(lblNumerosSorteados.Width * lblNumerosSorteados.Height /
-        //                    (charCount * lineHeight * charWidth));
-
-        //    // Set the Label properties.
-        //    lblNumerosSorteados.Text = text;
-        //    lblNumerosSorteados.FontSize = fontSize;
-        //}
 
         public void OnContentViewSizeChanged2(Label lblNumerosSorteados)
         {
