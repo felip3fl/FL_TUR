@@ -13,34 +13,35 @@ namespace FL_TUR.Control
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ResultadoSorteioView : ContentView
     {
-        Grid grid = new Grid();
+        Grid gridResultado;
 
         public ResultadoSorteioView()
         {
             InitializeComponent();
-            CriarComponentes();
+            InitializeGrid();
         }
 
-        private void CriarComponentes()
+        private void InitializeGrid()
         {
-            var contador = 1;
+            gridResultado = new Grid();
+            gridResultado.Style = (Style)Application.Current.Resources["ControlGridResultadoLotoFacil"];
 
-            grid.Style = (Style)Application.Current.Resources["ControlGridResultadoLotoFacil"];
+            var contadorClassId = 1;
 
-            for (int i = 0; i < 3; i++) //3 Linhas
+            for (int linha = 0; linha < 3; linha++) //3 Linhas
             {
-                for (int j = 0; j < 5; j++) //5 Números por linhas
+                for (int coluna = 0; coluna < 5; coluna++) //5 Números por linhas
                 {
-                    grid.Children.Add(new Label
+                    gridResultado.Children.Add(new Label
                     {
                         Text = "-",
-                        ClassId = contador++.ToString(),
+                        ClassId = contadorClassId++.ToString(),
                         Style = (Style)Application.Current.Resources["ControlLabelResultadoLotoFacil"]
-                }, j, i); ;
+                }, coluna, linha); ;
                 }
             };
 
-            this.Content = grid;
+            this.Content = gridResultado;
         }
 
         public void ExibirResultadoTela(NumerosSorteadosClass numerosSorteadosClass)
@@ -49,7 +50,7 @@ namespace FL_TUR.Control
 
             foreach (var numeroSorteado in numerosSorteadosClass.getListNumerosSorteadosOrdeado())
             {
-                var label = grid.Children.Cast<Label>().Where(a => a.ClassId == contador.ToString()).FirstOrDefault();
+                var label = gridResultado.Children.Cast<Label>().Where(a => a.ClassId == contador.ToString()).FirstOrDefault();
                 label.Text = numeroSorteado.ToString("00");
                 contador++;
             }
