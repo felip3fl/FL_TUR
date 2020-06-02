@@ -7,7 +7,7 @@
              x:Class="FL_TUR.Control.NumerosSorteioView">
  
   <ContentView.Content>
-
+        <Grid BindingContext="{Binding Nivel}"></Grid>
   </ContentView.Content>
 </ContentView>
     
