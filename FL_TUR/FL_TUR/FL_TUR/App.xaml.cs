@@ -9,7 +9,7 @@ namespace FL_TUR
         public App()
         {
             InitializeComponent();
-            MainPage = new FL_TUR.View.Inicio();
+            MainPage = new FL_TUR.View.Lotofacil();
         }
 
         protected override void OnStart()

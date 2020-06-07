@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FL_TUR.Control.ResultadoSorteioView">
+    <ContentView.Content>
+
+        <Grid Style="{StaticResource ControlGridResultadoLotoFacil}">
+            <Grid.RowDefinitions>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+
+            </Grid.ColumnDefinitions>
+
+            <Label ClassId="01" Grid.Column="0" Grid.Row="0" Text="{Binding numeros[0]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" />
+            <Label ClassId="02" Grid.Column="1" Grid.Row="0" Text="{Binding numeros[1]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" />
+            <Label ClassId="03" Grid.Column="2" Grid.Row="0" Text="{Binding numeros[2]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" />
+            <Label ClassId="04" Grid.Column="3" Grid.Row="0" Text="{Binding numeros[3]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" />
+            <Label ClassId="05" Grid.Column="4" Grid.Row="0" Text="{Binding numeros[4]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" />
+
+            <Label ClassId="06" Grid.Column="0" Grid.Row="1" Text="{Binding numeros[5]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+            <Label ClassId="07" Grid.Column="1" Grid.Row="1" Text="{Binding numeros[6]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+            <Label ClassId="08" Grid.Column="2" Grid.Row="1" Text="{Binding numeros[7]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+            <Label ClassId="09" Grid.Column="3" Grid.Row="1" Text="{Binding numeros[8]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+            <Label ClassId="10" Grid.Column="4" Grid.Row="1" Text="{Binding numeros[9]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+
+            <Label ClassId="11" Grid.Column="0" Grid.Row="2" Text="{Binding numeros[10]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+            <Label ClassId="12" Grid.Column="1" Grid.Row="2" Text="{Binding numeros[11]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+            <Label ClassId="13" Grid.Column="2" Grid.Row="2" Text="{Binding numeros[12]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+            <Label ClassId="14" Grid.Column="3" Grid.Row="2" Text="{Binding numeros[13]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+            <Label ClassId="15" Grid.Column="4" Grid.Row="2" Text="{Binding numeros[14]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+
+            <!--
+            <Label ClassId="16" Grid.Column="0" Grid.Row="3" Text="{Binding MsgErro}"  IsVisible="false" />
+            <Label ClassId="17" Grid.Column="1" Grid.Row="3" Text="{Binding MsgErro}"  IsVisible="false" />
+            <Label ClassId="18" Grid.Column="2" Grid.Row="3" Text="{Binding MsgErro}"  IsVisible="false" />
+            <Label ClassId="19" Grid.Column="3" Grid.Row="3" Text="{Binding MsgErro}"  IsVisible="false" />
+            <Label ClassId="20" Grid.Column="4" Grid.Row="3" Text="{Binding MsgErro}"  IsVisible="false" />
+            -->
+
+        </Grid>
+
+    </ContentView.Content>
+</ContentView>
