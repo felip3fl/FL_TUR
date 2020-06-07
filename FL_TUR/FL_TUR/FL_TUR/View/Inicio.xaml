@@ -24,7 +24,7 @@
             </Label>
             
             <FlexLayout x:Name="StackLayoutDescricao" Style="{StaticResource StackLayoutDescricao}">
-                <Label Style="{StaticResource LabelDescricao}" x:Name="lblDescricaoPrimaria" Text="Marque até 5 números para tirar do sorteio"></Label>
+                <Label Style="{StaticResource LabelDescricao}" x:Name="lblDescricaoPrimaria" Text="Marque até 9 números para tirar do sorteio"></Label>
                 <Label Style="{StaticResource LabelDescricaoSecundaria}" x:Name="lblDescricaoSecundaria" Text="Serão sorteado 15 números"></Label>
             </FlexLayout>
 

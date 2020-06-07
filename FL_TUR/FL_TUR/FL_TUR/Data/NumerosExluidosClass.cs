@@ -8,7 +8,7 @@ namespace FL_TUR.Data
 {
     public class NumerosExluidosClass
     {
-        private int _limiteNumerosExluidos = 5;
+        private int _limiteNumerosExluidos = 9;
 
         private List<int> _numerosExcluidosDoSorteio = new List<int>();
 
