@@ -11,27 +11,18 @@ using Xamarin.Forms.Xaml;
 namespace FL_TUR.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Inicio : ContentPage
+    public partial class Lotofacil : ContentPage
     {
-        public Inicio()
+        public Lotofacil()
         {
             InitializeComponent();
         } 
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await ResultadoSorteioView.ScaleTo(1.05, 50);
-
-            var numerosSorteados = new NumerosSorteadosClass();
-            numerosSorteados.NovoSorterio(NumerosSorteioView.getNumerosExluidos());
-
-            StringBuilder temp = new StringBuilder();
-            var texto = numerosSorteados.getNumerosSorteadosOrdeado();
-
-            NumerosSorteioView.Atualizar(numerosSorteados);
-            ResultadoSorteioView.ExibirResultadoTela(numerosSorteados);
-            
-            await ResultadoSorteioView.ScaleTo(1, 200);
+            //await ResultadoSorteioView.ScaleTo(1.05, 50);
+            RealizarSorteioAleatorio();
+            //await ResultadoSorteioView.ScaleTo(1, 200);
         }
 
         public void OnContentViewSizeChanged2(Label lblNumerosSorteados)
@@ -88,6 +79,18 @@ namespace FL_TUR.View
         private void NumerosLotofacil_AtualizaQuantidadeNumeros(object sender, EventArgs e)
         {
             AtualizaDescricaoPrimaria();
+        }
+
+        private void RealizarSorteioAleatorio()
+        {
+            var numerosSorteados = new NumerosSorteadosClass();
+            numerosSorteados.NovoSorterio(NumerosSorteioView.getNumerosExluidos());
+
+            StringBuilder temp = new StringBuilder();
+            var texto = numerosSorteados.getNumerosSorteadosOrdeado();
+
+            NumerosSorteioView.Atualizar(numerosSorteados);
+            //ResultadoSorteioView.ExibirResultadoTela(numerosSorteados);
         }
     }
 }

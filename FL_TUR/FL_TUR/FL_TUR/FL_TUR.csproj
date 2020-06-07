@@ -18,30 +18,26 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Control\NumerosSorteioView.xaml.cs">
+    <Compile Update="View\Util\NumerosSorteioView.xaml.cs">
       <DependentUpon>NumerosSorteioView.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Control\ResultadoSorteioView.xaml.cs">
+    <Compile Update="View\Util\ResultadoSorteioView.xaml.cs">
       <DependentUpon>ResultadoSorteioView.xaml</DependentUpon>
     </Compile>
-    <Compile Update="View\Inicio.xaml.cs">
-      <DependentUpon>Inicio.xaml</DependentUpon>
+    <Compile Update="View\Lotofacil.xaml.cs">
+      <DependentUpon>Lotofacil.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Control\NumerosSorteioView.xaml">
+    <EmbeddedResource Update="View\Util\NumerosSorteioView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Control\ResultadoSorteioView.xaml">
+    <EmbeddedResource Update="View\Util\ResultadoSorteioView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Inicio.xaml">
+    <EmbeddedResource Update="View\Lotofacil.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
   </ItemGroup>
 </Project>
