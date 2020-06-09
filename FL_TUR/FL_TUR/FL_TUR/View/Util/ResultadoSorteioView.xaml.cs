@@ -15,6 +15,12 @@ namespace FL_TUR.Control
     {
         Grid gridResultado;
 
+        public ResultadoSorteioView(NumerosSorteadosClass numerosSorteadosClass)
+        {
+            InitializeComponent();
+            BindingContext = new ViewModel.ResultadoSorteioViewModel(numerosSorteadosClass);
+        }
+
         public ResultadoSorteioView()
         {
             InitializeComponent();

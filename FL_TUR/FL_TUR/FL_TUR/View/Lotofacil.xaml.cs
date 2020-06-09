@@ -1,4 +1,5 @@
-﻿using FL_TUR.Services;
+﻿using FL_TUR.Control;
+using FL_TUR.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,12 +17,14 @@ namespace FL_TUR.View
         public Lotofacil()
         {
             InitializeComponent();
+            NumerosSorteadosClass numerosSorteadosClass = new NumerosSorteadosClass();
+            teste_teste.Children.Add(new ResultadoSorteioView());
         } 
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
             //await ResultadoSorteioView.ScaleTo(1.05, 50);
-            RealizarSorteioAleatorio();
+            RealizarSorteioAleatorioAsync();
             //await ResultadoSorteioView.ScaleTo(1, 200);
         }
 
@@ -81,7 +84,7 @@ namespace FL_TUR.View
             AtualizaDescricaoPrimaria();
         }
 
-        private void RealizarSorteioAleatorio()
+        private async Task RealizarSorteioAleatorioAsync()
         {
             var numerosSorteados = new NumerosSorteadosClass();
             numerosSorteados.NovoSorterio(NumerosSorteioView.getNumerosExluidos());
@@ -91,6 +94,14 @@ namespace FL_TUR.View
 
             NumerosSorteioView.Atualizar(numerosSorteados);
             //ResultadoSorteioView.ExibirResultadoTela(numerosSorteados);
+
+            teste_teste.Children.RemoveAt(1);
+
+            ResultadoSorteioView resultadoSorteioView = new ResultadoSorteioView(numerosSorteados);
+            teste_teste.Children.Add(resultadoSorteioView);
+            
+            await resultadoSorteioView.ScaleTo(1.05, 50);
+            await resultadoSorteioView.ScaleTo(1, 200);
         }
     }
 }

@@ -13,20 +13,23 @@ namespace FL_TUR.ViewModel
     {
         public List<string> numeros { get; set; }
 
+        public ResultadoSorteioViewModel(NumerosSorteadosClass numerosSorteadosClass)
+        {
+            numeros = (from o in numerosSorteadosClass.getListNumerosSorteadosOrdeado()
+                       select o.ToString()).ToList();
+        }
+
         public ResultadoSorteioViewModel()
         {
             numeros = new List<string>();
             for (int i = 0; i < 15; i++)
             {
-                numeros.Add(i.ToString("00"));
+                numeros.Add("-");
             }
         }
 
         public void ExibirResultadoTela(NumerosSorteadosClass numerosSorteadosClass)
         {
-
-            
-
             //var contador = 1;
 
             //foreach (var numeroSorteado in numerosSorteadosClass.getListNumerosSorteadosOrdeado())

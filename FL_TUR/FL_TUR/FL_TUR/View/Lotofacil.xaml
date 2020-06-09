@@ -29,9 +29,8 @@
             </FlexLayout>
 
             <pancake:PancakeView Style="{StaticResource PancakeViewCorpo}">
-                <StackLayout>
+                <StackLayout x:Name="teste_teste">
                     <controls:NumerosSorteioView x:Name="NumerosSorteioView" AtualizaQuantidadeNumeros="NumerosLotofacil_AtualizaQuantidadeNumeros" />
-                    <controls:ResultadoSorteioView x:Name="ResultadoSorteioView"/>
                 </StackLayout>
             </pancake:PancakeView>
 
