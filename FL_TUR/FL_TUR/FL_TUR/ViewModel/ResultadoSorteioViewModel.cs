@@ -11,7 +11,8 @@ namespace FL_TUR.ViewModel
 {
     public class ResultadoSorteioViewModel : INotifyPropertyChanged
     {
-        public List<string> numeros { get; set; }
+        private List<string> _numeros { get; set; }
+        public List<string> numeros { get { return _numeros; } set { _numeros = value; OnPropertyChanged("numeros"); } }
 
         public ResultadoSorteioViewModel(NumerosSorteadosClass numerosSorteadosClass)
         {
@@ -30,6 +31,10 @@ namespace FL_TUR.ViewModel
 
         public void ExibirResultadoTela(NumerosSorteadosClass numerosSorteadosClass)
         {
+            numeros.Clear();
+            numeros = (from o in numerosSorteadosClass.getListNumerosSorteadosOrdeado()
+                       select o.ToString()).ToList();
+
             //var contador = 1;
 
             //foreach (var numeroSorteado in numerosSorteadosClass.getListNumerosSorteadosOrdeado())
@@ -51,6 +56,6 @@ namespace FL_TUR.ViewModel
             }
         }
         #endregion
-    
+
     }
 }

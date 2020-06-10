@@ -1,5 +1,6 @@
 ﻿using FL_TUR.Control;
 using FL_TUR.Services;
+using FL_TUR.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,11 +15,13 @@ namespace FL_TUR.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Lotofacil : ContentPage
     {
+        ResultadoSorteioView resultadoSorteioView = new ResultadoSorteioView();
+
         public Lotofacil()
         {
             InitializeComponent();
             NumerosSorteadosClass numerosSorteadosClass = new NumerosSorteadosClass();
-            teste_teste.Children.Add(new ResultadoSorteioView());
+            teste_teste.Children.Add(resultadoSorteioView);
         } 
 
         private async void Button_Clicked(object sender, EventArgs e)
@@ -95,11 +98,13 @@ namespace FL_TUR.View
             NumerosSorteioView.Atualizar(numerosSorteados);
             //ResultadoSorteioView.ExibirResultadoTela(numerosSorteados);
 
-            teste_teste.Children.RemoveAt(1);
+            //teste_teste.Children.RemoveAt(1);
+            //ResultadoSorteioView resultadoSorteioView = new ResultadoSorteioView(numerosSorteados);
+            //teste_teste.Children.Add(resultadoSorteioView);
 
-            ResultadoSorteioView resultadoSorteioView = new ResultadoSorteioView(numerosSorteados);
-            teste_teste.Children.Add(resultadoSorteioView);
-            
+            var teste = (ResultadoSorteioViewModel)resultadoSorteioView.BindingContext;
+            teste.ExibirResultadoTela(numerosSorteados);
+
             await resultadoSorteioView.ScaleTo(1.05, 50);
             await resultadoSorteioView.ScaleTo(1, 200);
         }
