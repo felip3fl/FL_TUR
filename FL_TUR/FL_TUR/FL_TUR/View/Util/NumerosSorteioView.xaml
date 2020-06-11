@@ -10,35 +10,35 @@
 
         <Grid Style="{StaticResource ControlNumeros}">
 
-            <Button ClassId="1" Grid.Column="0" Grid.Row="0" Text="01" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="2" Grid.Column="1" Grid.Row="0" Text="02" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="3" Grid.Column="2" Grid.Row="0" Text="03" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="4" Grid.Column="3" Grid.Row="0" Text="04" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="5" Grid.Column="4" Grid.Row="0" Text="05" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="0" Grid.Column="0" Grid.Row="0" Text="01" Style="{Binding StyleBotoesSorteio[0]}" Command="{Binding CommandMarcaNumero}" CommandParameter="0"/>
+            <Button ClassId="1" Grid.Column="1" Grid.Row="0" Text="02" Style="{Binding StyleBotoesSorteio[1]}" Command="{Binding CommandMarcaNumero}" CommandParameter="1"/>
+            <Button ClassId="2" Grid.Column="2" Grid.Row="0" Text="03" Style="{Binding StyleBotoesSorteio[2]}" Command="{Binding CommandMarcaNumero}" CommandParameter="2"/>
+            <Button ClassId="3" Grid.Column="3" Grid.Row="0" Text="04" Style="{Binding StyleBotoesSorteio[3]}" Command="{Binding CommandMarcaNumero}" CommandParameter="3"/>
+            <Button ClassId="4" Grid.Column="4" Grid.Row="0" Text="05" Style="{Binding StyleBotoesSorteio[4]}" Command="{Binding CommandMarcaNumero}" CommandParameter="4"/>
 
-            <Button ClassId="6" Grid.Column="0" Grid.Row="1" Text="06" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="7" Grid.Column="1" Grid.Row="1" Text="07" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="8" Grid.Column="2" Grid.Row="1" Text="08" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="9" Grid.Column="3" Grid.Row="1" Text="09" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="10" Grid.Column="4" Grid.Row="1" Text="10" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="5" Grid.Column="0" Grid.Row="1" Text="06" Style="{Binding StyleBotoesSorteio[5]}" Command="{Binding CommandMarcaNumero}" CommandParameter="5"/>
+            <Button ClassId="6" Grid.Column="1" Grid.Row="1" Text="07" Style="{Binding StyleBotoesSorteio[6]}" Command="{Binding CommandMarcaNumero}" CommandParameter="6"/>
+            <Button ClassId="7" Grid.Column="2" Grid.Row="1" Text="08" Style="{Binding StyleBotoesSorteio[7]}" Command="{Binding CommandMarcaNumero}" CommandParameter="7"/>
+            <Button ClassId="8" Grid.Column="3" Grid.Row="1" Text="09" Style="{Binding StyleBotoesSorteio[8]}" Command="{Binding CommandMarcaNumero}" CommandParameter="8"/>
+            <Button ClassId="9" Grid.Column="4" Grid.Row="1" Text="10" Style="{Binding StyleBotoesSorteio[9]}" Command="{Binding CommandMarcaNumero}" CommandParameter="9"/>
 
-            <Button ClassId="11" Grid.Column="0" Grid.Row="2" Text="11" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="12" Grid.Column="1" Grid.Row="2" Text="12" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="13" Grid.Column="2" Grid.Row="2" Text="13" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="14" Grid.Column="3" Grid.Row="2" Text="14" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="15" Grid.Column="4" Grid.Row="2" Text="15" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="10" Grid.Column="0" Grid.Row="2" Text="11" Style="{Binding StyleBotoesSorteio[10]}" Command="{Binding CommandMarcaNumero}" CommandParameter="10"/>
+            <Button ClassId="11" Grid.Column="1" Grid.Row="2" Text="12" Style="{Binding StyleBotoesSorteio[11]}" Command="{Binding CommandMarcaNumero}" CommandParameter="11"/>
+            <Button ClassId="12" Grid.Column="2" Grid.Row="2" Text="13" Style="{Binding StyleBotoesSorteio[12]}" Command="{Binding CommandMarcaNumero}" CommandParameter="12"/>
+            <Button ClassId="13" Grid.Column="3" Grid.Row="2" Text="14" Style="{Binding StyleBotoesSorteio[13]}" Command="{Binding CommandMarcaNumero}" CommandParameter="13"/>
+            <Button ClassId="14" Grid.Column="4" Grid.Row="2" Text="15" Style="{Binding StyleBotoesSorteio[14]}" Command="{Binding CommandMarcaNumero}" CommandParameter="14"/>
 
-            <Button ClassId="16" Grid.Column="0" Grid.Row="3" Text="16" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="17" Grid.Column="1" Grid.Row="3" Text="17" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="18" Grid.Column="2" Grid.Row="3" Text="18" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="19" Grid.Column="3" Grid.Row="3" Text="19" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="20" Grid.Column="4" Grid.Row="3" Text="20" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="15" Grid.Column="0" Grid.Row="3" Text="16" Style="{Binding StyleBotoesSorteio[15]}" Command="{Binding CommandMarcaNumero}" CommandParameter="15"/>
+            <Button ClassId="16" Grid.Column="1" Grid.Row="3" Text="17" Style="{Binding StyleBotoesSorteio[16]}" Command="{Binding CommandMarcaNumero}" CommandParameter="16"/>
+            <Button ClassId="17" Grid.Column="2" Grid.Row="3" Text="18" Style="{Binding StyleBotoesSorteio[17]}" Command="{Binding CommandMarcaNumero}" CommandParameter="17"/>
+            <Button ClassId="18" Grid.Column="3" Grid.Row="3" Text="19" Style="{Binding StyleBotoesSorteio[18]}" Command="{Binding CommandMarcaNumero}" CommandParameter="18"/>
+            <Button ClassId="19" Grid.Column="4" Grid.Row="3" Text="20" Style="{Binding StyleBotoesSorteio[19]}" Command="{Binding CommandMarcaNumero}" CommandParameter="19"/>
 
-            <Button ClassId="21" Grid.Column="0" Grid.Row="4" Text="21" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="22" Grid.Column="1" Grid.Row="4" Text="22" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="23" Grid.Column="2" Grid.Row="4" Text="23" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="24" Grid.Column="3" Grid.Row="4" Text="24" Style="{StaticResource BotoesSorteio}" />
-            <Button ClassId="25" Grid.Column="4" Grid.Row="4" Text="25" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="20" Grid.Column="0" Grid.Row="4" Text="21" Style="{Binding StyleBotoesSorteio[20]}" Command="{Binding CommandMarcaNumero}" CommandParameter="20"/>
+            <Button ClassId="21" Grid.Column="1" Grid.Row="4" Text="22" Style="{Binding StyleBotoesSorteio[21]}" Command="{Binding CommandMarcaNumero}" CommandParameter="21"/>
+            <Button ClassId="22" Grid.Column="2" Grid.Row="4" Text="23" Style="{Binding StyleBotoesSorteio[22]}" Command="{Binding CommandMarcaNumero}" CommandParameter="22"/>
+            <Button ClassId="23" Grid.Column="3" Grid.Row="4" Text="24" Style="{Binding StyleBotoesSorteio[23]}" Command="{Binding CommandMarcaNumero}" CommandParameter="23"/>
+            <Button ClassId="24" Grid.Column="4" Grid.Row="4" Text="25" Style="{Binding StyleBotoesSorteio[24]}" Command="{Binding CommandMarcaNumero}" CommandParameter="24"/>
 
         </Grid>
 
