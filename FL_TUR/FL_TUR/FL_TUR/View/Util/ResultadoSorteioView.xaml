@@ -8,12 +8,6 @@
     <ContentView.Content>
 
         <Grid Style="{StaticResource ControlGridResultadoLotoFacil}">
-            <Grid.RowDefinitions>
-
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-
-            </Grid.ColumnDefinitions>
 
             <Label ClassId="01" Grid.Column="0" Grid.Row="0" Text="{Binding numeros[0]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" />
             <Label ClassId="02" Grid.Column="1" Grid.Row="0" Text="{Binding numeros[1]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" />
