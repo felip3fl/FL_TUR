@@ -138,11 +138,25 @@
             </Style>
 
             <Style TargetType="Button" x:Key="BotoesSorteio">
-                <Setter Property="BackgroundColor" Value="{StaticResource CorBotaoSorteio}" />
-                <Setter Property="TextColor" Value="{StaticResource CorTextoBotaoSorteio}" />
                 <Setter Property="CornerRadius" Value="{StaticResource ArredondamentoBordaBotao}" />
                 <Setter Property="Padding" Value="0" />
                 <Setter Property="Margin" Value="0" />
+                <Setter Property="BackgroundColor" Value="Blue" />
+            </Style>
+
+            <Style TargetType="Button" x:Key="BotoesSorteioMarcado" BasedOn="{StaticResource BotoesSorteio}">
+                <Setter Property="BackgroundColor" Value="{StaticResource CorBotaoSorteioMarcado}" />
+                <Setter Property="TextColor" Value="{StaticResource CorTextoBotaoSorteioMarcado}" />
+            </Style>
+
+            <Style TargetType="Button" x:Key="BotoesSorteioDesmarcado" BasedOn="{StaticResource BotoesSorteio}">
+                <Setter Property="BackgroundColor" Value="{StaticResource CorBotaoSorteio}" />
+                <Setter Property="TextColor" Value="{StaticResource CorTextoBotaoSorteio}" />
+            </Style>
+
+            <Style TargetType="Button" x:Key="BotoesSorteioExluido" BasedOn="{StaticResource BotoesSorteio}">
+                <Setter Property="BackgroundColor" Value="{StaticResource CorBotaoSorteioExcluido}" />
+                <Setter Property="TextColor" Value="{StaticResource CorTextoBotaoSorteioExcluido}" />
             </Style>
 
             <Style TargetType="Grid" x:Key="ControlGridResultadoLotoFacil">
