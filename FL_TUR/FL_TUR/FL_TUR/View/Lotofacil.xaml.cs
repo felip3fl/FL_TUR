@@ -103,7 +103,7 @@ namespace FL_TUR.View
             //teste_teste.Children.Add(resultadoSorteioView);
 
             var teste = (ResultadoSorteioViewModel)resultadoSorteioView.BindingContext;
-            teste.ExibirResultadoTela(numerosSorteados);
+            teste.AtualizarResultadoTela(numerosSorteados);
 
             await resultadoSorteioView.ScaleTo(1.05, 50);
             await resultadoSorteioView.ScaleTo(1, 200);

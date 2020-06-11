@@ -11,39 +11,35 @@ namespace FL_TUR.ViewModel
 {
     public class ResultadoSorteioViewModel : INotifyPropertyChanged
     {
-        private List<string> _numeros { get; set; }
-        public List<string> numeros { get { return _numeros; } set { _numeros = value; OnPropertyChanged("numeros"); } }
+        private List<string> _Numeros { get; set; }
+        public List<string> Numeros { get { return _Numeros; } set { _Numeros = value; OnPropertyChanged("numeros"); } }
 
+        #region Construtores
         public ResultadoSorteioViewModel(NumerosSorteadosClass numerosSorteadosClass)
         {
-            numeros = (from o in numerosSorteadosClass.getListNumerosSorteadosOrdeado()
-                       select o.ToString()).ToList();
+            AtualizarResultadoTela(numerosSorteadosClass);
         }
 
         public ResultadoSorteioViewModel()
         {
-            numeros = new List<string>();
-            for (int i = 0; i < 15; i++)
-            {
-                numeros.Add("-");
-            }
+            AtualizarResultadoEmBrancoTela();
+        }
+        #endregion
+
+        public void AtualizarResultadoTela(NumerosSorteadosClass numerosSorteadosClass)
+        {
+            Numeros.Clear();
+            Numeros = (from o in numerosSorteadosClass.getListNumerosSorteadosOrdeado()
+                       select o.ToString()).ToList();
         }
 
-        public void ExibirResultadoTela(NumerosSorteadosClass numerosSorteadosClass)
+        public void AtualizarResultadoEmBrancoTela()
         {
-            numeros.Clear();
-            numeros = (from o in numerosSorteadosClass.getListNumerosSorteadosOrdeado()
-                       select o.ToString()).ToList();
-
-            //var contador = 1;
-
-            //foreach (var numeroSorteado in numerosSorteadosClass.getListNumerosSorteadosOrdeado())
-            //{
-
-            //    grid.Children.Cast<Label>().Where(a => a.ClassId == contador.ToString()).FirstOrDefault();
-            //    label.Text = numeroSorteado.ToString("00");
-            //    contador++;
-            //}
+            Numeros = new List<string>();
+            for (int i = 0; i < 15; i++)
+            {
+                Numeros.Add("-");
+            }
         }
 
         #region INotifyPropertyChanged
