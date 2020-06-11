@@ -22,7 +22,7 @@ namespace FL_TUR.Control
         public NumerosSorteioView()
         {
             InitializeComponent();
-            InitializeComponentGridSorteio();
+            //InitializeComponentGridSorteio();
         }
 
         private void ResetBotoes()

@@ -5,9 +5,43 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="FL_TUR.Control.NumerosSorteioView">
- 
-  <ContentView.Content>
-        <Grid BindingContext="{Binding Nivel}"></Grid>
-  </ContentView.Content>
+
+    <ContentView.Content>
+
+        <Grid Style="{StaticResource ControlNumeros}">
+
+            <Button ClassId="1" Grid.Column="0" Grid.Row="0" Text="01" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="2" Grid.Column="1" Grid.Row="0" Text="02" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="3" Grid.Column="2" Grid.Row="0" Text="03" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="4" Grid.Column="3" Grid.Row="0" Text="04" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="5" Grid.Column="4" Grid.Row="0" Text="05" Style="{StaticResource BotoesSorteio}" />
+
+            <Button ClassId="6" Grid.Column="0" Grid.Row="1" Text="06" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="7" Grid.Column="1" Grid.Row="1" Text="07" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="8" Grid.Column="2" Grid.Row="1" Text="08" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="9" Grid.Column="3" Grid.Row="1" Text="09" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="10" Grid.Column="4" Grid.Row="1" Text="10" Style="{StaticResource BotoesSorteio}" />
+
+            <Button ClassId="11" Grid.Column="0" Grid.Row="2" Text="11" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="12" Grid.Column="1" Grid.Row="2" Text="12" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="13" Grid.Column="2" Grid.Row="2" Text="13" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="14" Grid.Column="3" Grid.Row="2" Text="14" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="15" Grid.Column="4" Grid.Row="2" Text="15" Style="{StaticResource BotoesSorteio}" />
+
+            <Button ClassId="16" Grid.Column="0" Grid.Row="3" Text="16" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="17" Grid.Column="1" Grid.Row="3" Text="17" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="18" Grid.Column="2" Grid.Row="3" Text="18" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="19" Grid.Column="3" Grid.Row="3" Text="19" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="20" Grid.Column="4" Grid.Row="3" Text="20" Style="{StaticResource BotoesSorteio}" />
+
+            <Button ClassId="21" Grid.Column="0" Grid.Row="4" Text="21" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="22" Grid.Column="1" Grid.Row="4" Text="22" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="23" Grid.Column="2" Grid.Row="4" Text="23" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="24" Grid.Column="3" Grid.Row="4" Text="24" Style="{StaticResource BotoesSorteio}" />
+            <Button ClassId="25" Grid.Column="4" Grid.Row="4" Text="25" Style="{StaticResource BotoesSorteio}" />
+
+        </Grid>
+
+    </ContentView.Content>
 </ContentView>
     
