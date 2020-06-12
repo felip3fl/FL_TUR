@@ -12,7 +12,7 @@ namespace FL_TUR.ViewModel
     public class ResultadoSorteioViewModel : INotifyPropertyChanged
     {
         private List<string> _Numeros { get; set; }
-        public List<string> Numeros { get { return _Numeros; } set { _Numeros = value; OnPropertyChanged("numeros"); } }
+        public List<string> Numeros { get { return _Numeros; } set { _Numeros = value; OnPropertyChanged("Numeros"); } }
 
         #region Construtores
         public ResultadoSorteioViewModel(NumerosSorteadosClass numerosSorteadosClass)

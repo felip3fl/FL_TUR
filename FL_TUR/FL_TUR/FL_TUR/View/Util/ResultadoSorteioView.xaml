@@ -9,23 +9,23 @@
 
         <Grid Style="{StaticResource ControlGridResultadoLotoFacil}">
 
-            <Label ClassId="01" Grid.Column="0" Grid.Row="0" Text="{Binding numeros[0]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" />
-            <Label ClassId="02" Grid.Column="1" Grid.Row="0" Text="{Binding numeros[1]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" />
-            <Label ClassId="03" Grid.Column="2" Grid.Row="0" Text="{Binding numeros[2]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" />
-            <Label ClassId="04" Grid.Column="3" Grid.Row="0" Text="{Binding numeros[3]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" />
-            <Label ClassId="05" Grid.Column="4" Grid.Row="0" Text="{Binding numeros[4]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" />
+            <Label ClassId="01" Grid.Column="0" Grid.Row="0" Text="{Binding Numeros[0]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" />
+            <Label ClassId="02" Grid.Column="1" Grid.Row="0" Text="{Binding Numeros[1]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" />
+            <Label ClassId="03" Grid.Column="2" Grid.Row="0" Text="{Binding Numeros[2]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" />
+            <Label ClassId="04" Grid.Column="3" Grid.Row="0" Text="{Binding Numeros[3]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" />
+            <Label ClassId="05" Grid.Column="4" Grid.Row="0" Text="{Binding Numeros[4]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" />
 
-            <Label ClassId="06" Grid.Column="0" Grid.Row="1" Text="{Binding numeros[5]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
-            <Label ClassId="07" Grid.Column="1" Grid.Row="1" Text="{Binding numeros[6]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
-            <Label ClassId="08" Grid.Column="2" Grid.Row="1" Text="{Binding numeros[7]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
-            <Label ClassId="09" Grid.Column="3" Grid.Row="1" Text="{Binding numeros[8]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
-            <Label ClassId="10" Grid.Column="4" Grid.Row="1" Text="{Binding numeros[9]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+            <Label ClassId="06" Grid.Column="0" Grid.Row="1" Text="{Binding Numeros[5]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+            <Label ClassId="07" Grid.Column="1" Grid.Row="1" Text="{Binding Numeros[6]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+            <Label ClassId="08" Grid.Column="2" Grid.Row="1" Text="{Binding Numeros[7]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+            <Label ClassId="09" Grid.Column="3" Grid.Row="1" Text="{Binding Numeros[8]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+            <Label ClassId="10" Grid.Column="4" Grid.Row="1" Text="{Binding Numeros[9]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
 
-            <Label ClassId="11" Grid.Column="0" Grid.Row="2" Text="{Binding numeros[10]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
-            <Label ClassId="12" Grid.Column="1" Grid.Row="2" Text="{Binding numeros[11]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
-            <Label ClassId="13" Grid.Column="2" Grid.Row="2" Text="{Binding numeros[12]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
-            <Label ClassId="14" Grid.Column="3" Grid.Row="2" Text="{Binding numeros[13]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
-            <Label ClassId="15" Grid.Column="4" Grid.Row="2" Text="{Binding numeros[14]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+            <Label ClassId="11" Grid.Column="0" Grid.Row="2" Text="{Binding Numeros[10]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+            <Label ClassId="12" Grid.Column="1" Grid.Row="2" Text="{Binding Numeros[11]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+            <Label ClassId="13" Grid.Column="2" Grid.Row="2" Text="{Binding Numeros[12]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+            <Label ClassId="14" Grid.Column="3" Grid.Row="2" Text="{Binding Numeros[13]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
+            <Label ClassId="15" Grid.Column="4" Grid.Row="2" Text="{Binding Numeros[14]}" Style="{StaticResource ControlLabelResultadoLotoFacil}" /> 
 
             <!--
             <Label ClassId="16" Grid.Column="0" Grid.Row="3" Text="{Binding MsgErro}"  IsVisible="false" />
