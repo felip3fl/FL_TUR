@@ -74,80 +74,80 @@ namespace FL_TUR.ViewModel
             OnPropertyChanged("StyleBotoesSorteio");
         }
 
-        //private void AtualizarNumerosSorteados(NumerosSorteadosClass numerosSorteadosClass)
+        private void AtualizarNumerosSorteados(NumerosSorteadosClass numerosSorteadosClass)
+        {
+            foreach (var item in numerosSorteadosClass.NumerosSorteados)
+            {
+                StyleBotoesSorteio[item-1] = (Style)Application.Current.Resources["BotoesSorteioMarcado"];
+            }
+
+            OnPropertyChanged("StyleBotoesSorteio");
+        }
+
+        private void AtualizarNumerosExcluidos(NumerosExluidosClass numerosExluidos)
+        {
+            foreach (var item in numerosExluidos.NumerosExcluidosDoSorteio)
+            {
+                StyleBotoesSorteio[item - 1] = (Style)Application.Current.Resources["BotoesSorteioExluido"];
+            }
+
+            OnPropertyChanged("StyleBotoesSorteio");
+        }
+
+        public void Atualizar(NumerosSorteadosClass numerosSorteadosClass = null)
+        {
+            ResetStyleTodosBotoes();
+
+            if (numerosSorteadosClass != null)
+                AtualizarNumerosExcluidos(numerosExluidos);
+
+            if (numerosExluidos != null)
+                AtualizarNumerosSorteados(numerosSorteadosClass);
+        }
+
+
+
+        //private void OnButtonClicked(object sender, EventArgs args)
         //{
-        //    var botoesSelecionados = grid.Children.Cast<Button>().Where(c => numerosSorteadosClass.NumerosSorteados.Contains(Convert.ToInt32(c.Text)));
-        //    foreach (var item in botoesSelecionados)
+        //    Button botao = (Button)sender;
+
+        //    try
         //    {
-        //        item.BackgroundColor = (Color)Application.Current.Resources["CorBotaoSorteioMarcado"];
-        //        item.TextColor = (Color)Application.Current.Resources["CorTextoBotaoSorteioMarcado"];
+        //        var numeroSelecionado = Convert.ToInt32(botao.Text);
+
+        //        if (!numerosExluidos.NumerosExcluidosDoSorteio.Contains(numeroSelecionado))
+        //        {
+        //            numerosExluidos.AdicionarNumeroExcluido(numeroSelecionado);
+        //            botao.BackgroundColor = (Color)Application.Current.Resources["CorBotaoSorteioExcluido"];
+        //            botao.TextColor = (Color)Application.Current.Resources["CorTextoBotaoSorteioExcluido"];
+        //        }
+        //        else
+        //        {
+        //            numerosExluidos.ExluirNumeroExcluido(numeroSelecionado);
+        //            botao.BackgroundColor = (Color)Application.Current.Resources["CorBotaoSorteio"];
+        //            botao.TextColor = (Color)Application.Current.Resources["CorTextoBotaoSorteio"];
+        //        }
+
+        //        AtualizaQuantidadeNumeros(this, null);
         //    }
+        //    catch (LimiteNumerosExluidosException)
+        //    {
+        //        App.Current.MainPage.DisplayAlert("Linmite de núemros excluidos", "Você selecionou o limite máximo de números que podem ser excluído.", "OK");
+        //    }
+
         //}
 
-            //private void AtualizarNumerosExcluidos(NumerosExluidosClass numerosExluidos)
-            //{
-            //    var botoesExcluidos = grid.Children.Cast<Button>().Where(c => numerosExluidos.NumerosExcluidosDoSorteio.Contains(Convert.ToInt32(c.Text)));
-            //    foreach (var item in botoesExcluidos)
-            //    {
-            //        item.BackgroundColor = (Color)Application.Current.Resources["CorBotaoSorteioExcluido"];
-            //        item.TextColor = (Color)Application.Current.Resources["CorTextoBotaoSorteioExcluido"];
-            //    }
-            //}
+        public List<int> getNumerosExluidos()
+        {
+            return numerosExluidos.NumerosExcluidosDoSorteio;
+        }
 
-            //public void Atualizar(NumerosSorteadosClass numerosSorteadosClass = null)
-            //{
-            //    ResetBotoes();
+        //public int QuantidadeDeNumerosRestante()
+        //{
+        //    return numerosExluidos.QuantidadeDeNumerosRestante();
+        //}
 
-            //    if (numerosSorteadosClass != null)
-            //        AtualizarNumerosExcluidos(numerosExluidos);
-
-            //    if (numerosExluidos != null)
-            //        AtualizarNumerosSorteados(numerosSorteadosClass);
-            //}
-
-
-
-            //private void OnButtonClicked(object sender, EventArgs args)
-            //{
-            //    Button botao = (Button)sender;
-
-            //    try
-            //    {
-            //        var numeroSelecionado = Convert.ToInt32(botao.Text);
-
-            //        if (!numerosExluidos.NumerosExcluidosDoSorteio.Contains(numeroSelecionado))
-            //        {
-            //            numerosExluidos.AdicionarNumeroExcluido(numeroSelecionado);
-            //            botao.BackgroundColor = (Color)Application.Current.Resources["CorBotaoSorteioExcluido"];
-            //            botao.TextColor = (Color)Application.Current.Resources["CorTextoBotaoSorteioExcluido"];
-            //        }
-            //        else
-            //        {
-            //            numerosExluidos.ExluirNumeroExcluido(numeroSelecionado);
-            //            botao.BackgroundColor = (Color)Application.Current.Resources["CorBotaoSorteio"];
-            //            botao.TextColor = (Color)Application.Current.Resources["CorTextoBotaoSorteio"];
-            //        }
-
-            //        AtualizaQuantidadeNumeros(this, null);
-            //    }
-            //    catch (LimiteNumerosExluidosException)
-            //    {
-            //        App.Current.MainPage.DisplayAlert("Linmite de núemros excluidos", "Você selecionou o limite máximo de números que podem ser excluído.", "OK");
-            //    }
-
-            //}
-
-            //public List<int> getNumerosExluidos()
-            //{
-            //    return numerosExluidos.NumerosExcluidosDoSorteio;
-            //}
-
-            //public int QuantidadeDeNumerosRestante()
-            //{
-            //    return numerosExluidos.QuantidadeDeNumerosRestante();
-            //}
-
-            #region INotifyPropertyChanged
+        #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string NameProperty)
         {

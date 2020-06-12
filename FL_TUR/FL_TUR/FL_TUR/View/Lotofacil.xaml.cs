@@ -15,13 +15,10 @@ namespace FL_TUR.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Lotofacil : ContentPage
     {
-        ResultadoSorteioView resultadoSorteioView = new ResultadoSorteioView();
-
         public Lotofacil()
         {
             InitializeComponent();
             NumerosSorteadosClass numerosSorteadosClass = new NumerosSorteadosClass();
-            teste_teste.Children.Add(resultadoSorteioView);
         } 
 
         private async void Button_Clicked(object sender, EventArgs e)
@@ -72,14 +69,15 @@ namespace FL_TUR.View
 
         private void AtualizaDescricaoPrimaria()
         {
-            var quantidadeNumeros = NumerosSorteioView.QuantidadeDeNumerosRestante();
+            //TODO RECUREPARA
+            //var quantidadeNumeros = NumerosSorteioView.QuantidadeDeNumerosRestante();
 
-            if (quantidadeNumeros == 1)
-                lblDescricaoPrimaria.Text = $"Marque mais 1 número para remover do sorteio";
-            else if (quantidadeNumeros < 1)
-                lblDescricaoPrimaria.Text = $"Você não pode remover mais números do sorteio";
-            else
-                lblDescricaoPrimaria.Text = $"Marque até {quantidadeNumeros} números para remover do sorteio";
+            //if (quantidadeNumeros == 1)
+            //    lblDescricaoPrimaria.Text = $"Marque mais 1 número para remover do sorteio";
+            //else if (quantidadeNumeros < 1)
+            //    lblDescricaoPrimaria.Text = $"Você não pode remover mais números do sorteio";
+            //else
+            //    lblDescricaoPrimaria.Text = $"Marque até {quantidadeNumeros} números para remover do sorteio";
         }
 
         private void NumerosLotofacil_AtualizaQuantidadeNumeros(object sender, EventArgs e)
@@ -89,24 +87,30 @@ namespace FL_TUR.View
 
         private async Task RealizarSorteioAleatorioAsync()
         {
+            #region NumerosSorteadosClass
+            var numerosSorteioViewModel = (NumerosSorteioViewModel)NumerosSorteioView.BindingContext;
+
             var numerosSorteados = new NumerosSorteadosClass();
-            numerosSorteados.NovoSorterio(NumerosSorteioView.getNumerosExluidos());
+            numerosSorteados.NovoSorterio(numerosSorteioViewModel.getNumerosExluidos());
+            //StringBuilder temp = new StringBuilder();
+            //var texto = numerosSorteados.getNumerosSorteadosOrdeado();
+            
+            numerosSorteioViewModel.Atualizar(numerosSorteados);
 
-            StringBuilder temp = new StringBuilder();
-            var texto = numerosSorteados.getNumerosSorteadosOrdeado();
 
-            NumerosSorteioView.Atualizar(numerosSorteados);
+            #endregion
+
             //ResultadoSorteioView.ExibirResultadoTela(numerosSorteados);
 
             //teste_teste.Children.RemoveAt(1);
             //ResultadoSorteioView resultadoSorteioView = new ResultadoSorteioView(numerosSorteados);
             //teste_teste.Children.Add(resultadoSorteioView);
 
-            var teste = (ResultadoSorteioViewModel)resultadoSorteioView.BindingContext;
+            var teste = (ResultadoSorteioViewModel)ControlResultadoSorteioView.BindingContext;
             teste.AtualizarResultadoTela(numerosSorteados);
 
-            await resultadoSorteioView.ScaleTo(1.05, 50);
-            await resultadoSorteioView.ScaleTo(1, 200);
+            //await resultadoSorteioView.ScaleTo(1.05, 50);
+            //await resultadoSorteioView.ScaleTo(1, 200);
         }
     }
 }
