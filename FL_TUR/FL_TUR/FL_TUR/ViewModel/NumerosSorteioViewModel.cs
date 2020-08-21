@@ -13,7 +13,6 @@ namespace FL_TUR.ViewModel
 {
     public class NumerosSorteioViewModel : INotifyPropertyChanged
     {
-
         private List<string> _Numeros { get; set; }
         public List<string> Numeros { get { return _Numeros; } set { _Numeros = value; OnPropertyChanged("Numeros"); } }
         private Style[] _StyleBotoesSorteio = new Style[25];
@@ -25,6 +24,8 @@ namespace FL_TUR.ViewModel
                 return new Command<string>((x) => MarcaNumero(x));
             }
         }
+
+
 
         private NumerosExluidosClass numerosExluidos = new NumerosExluidosClass();
 

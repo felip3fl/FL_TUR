@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:toolkit="clr-namespace:FL_TUR.Behaviors"
              mc:Ignorable="d"
              x:Class="FL_TUR.Control.NumerosSorteioView">
 
@@ -38,8 +39,19 @@
             <Button ClassId="21" Grid.Column="1" Grid.Row="4" Text="22" Style="{Binding StyleBotoesSorteio[21]}" Command="{Binding CommandMarcaNumero}" CommandParameter="21"/>
             <Button ClassId="22" Grid.Column="2" Grid.Row="4" Text="23" Style="{Binding StyleBotoesSorteio[22]}" Command="{Binding CommandMarcaNumero}" CommandParameter="22"/>
             <Button ClassId="23" Grid.Column="3" Grid.Row="4" Text="24" Style="{Binding StyleBotoesSorteio[23]}" Command="{Binding CommandMarcaNumero}" CommandParameter="23"/>
-            <Button ClassId="24" Grid.Column="4" Grid.Row="4" Text="25" Style="{Binding StyleBotoesSorteio[24]}" Command="{Binding CommandMarcaNumero}" CommandParameter="24"/>
+            <Button ClassId="24" Grid.Column="4" Grid.Row="4" Text="25" Style="{Binding StyleBotoesSorteio[24]}" Command="{Binding CommandMarcaNumero}" CommandParameter="24">
+                <Button.Behaviors>
+                    <toolkit:TapBehavior x:Name="tapBehavior3" />
+                </Button.Behaviors>
 
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button">
+                        <DataTrigger.EnterActions>
+                            <toolkit:ShiverAction />
+                        </DataTrigger.EnterActions>
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
         </Grid>
 
     </ContentView.Content>
