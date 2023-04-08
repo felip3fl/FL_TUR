@@ -5,16 +5,18 @@
 <p align="justify">
  Projeto desenvolvido usando XAMARIN com o proposito de sortear números aleatorios 
 </p>
-<p align="center">
+
+
+<h3 align="left">
+
+  <img src="https://user-images.githubusercontent.com/20684484/230694288-e6a596d8-9c06-46db-8d93-2dafc791501e.png" width="70%">
+</h3>
+
+ <p align="left">
 <img src="https://img.shields.io/badge/STATUS-FINALIZADO-blue">
 <img src="https://img.shields.io/badge/PROJECT%20VERSION-1.0.0-blue">
 </p>
-
-<h3 align="center">
-
-![Sem título](https://user-images.githubusercontent.com/20684484/230694288-e6a596d8-9c06-46db-8d93-2dafc791501e.png)
-</h3>
-
+ 
 <BR>
 
 ## :hammer: Funcionalidades do projeto
