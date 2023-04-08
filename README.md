@@ -6,8 +6,8 @@
  Projeto desenvolvido usando XAMARIN com o proposito de sortear números aleatorios 
 </p>
 <p align="center">
-<img src="https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-green">
-<img src="https://img.shields.io/badge/PROJECT%20VERSION-0.0.0-blue">
+<img src="https://img.shields.io/badge/STATUS-FINALIZADO-blue">
+<img src="https://img.shields.io/badge/PROJECT%20VERSION-1.0.0-blue">
 </p>
 
 <h3 align="center">
