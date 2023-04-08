@@ -1,4 +1,9 @@
-<h3 align="center"> <img src="https://user-images.githubusercontent.com/20684484/212168629-795c6dd1-1205-4d20-b4b5-5c1b00ce1818.png" width="150px" align="center" ><BR><BR>TUR<BR><BR></h3>
+<h3 align="center"> <img src="https://user-images.githubusercontent.com/20684484/230697325-16b1fb2d-d599-4a49-b5b8-17bf1d86113c.png" width="160px" align="center" ><BR><BR>TUR<BR><BR></h3>
+
+<p align="center">
+<img src="https://img.shields.io/badge/STATUS-FINALIZADO-purple">
+<img src="https://img.shields.io/badge/PROJECT%20VERSION-1.0.0-purple">
+</p>
 
 ## 📃 Descrição do projeto
 
@@ -8,14 +13,8 @@
 
 
 <h3 align="left">
-
-  <img src="https://user-images.githubusercontent.com/20684484/230694288-e6a596d8-9c06-46db-8d93-2dafc791501e.png" width="70%">
+  <img src="https://user-images.githubusercontent.com/20684484/230697271-af04059f-01c1-466f-9f49-94ad4cbe2344.png" width="50%">
 </h3>
-
- <p align="left">
-<img src="https://img.shields.io/badge/STATUS-FINALIZADO-blue">
-<img src="https://img.shields.io/badge/PROJECT%20VERSION-1.0.0-blue">
-</p>
  
 <BR>
 
