@@ -120,7 +120,7 @@
             <Style TargetType="pancake:PancakeView" x:Key="PancakeViewCorpo">
                 <Setter Property="Padding" Value="30" />
                 <Setter Property="Margin" Value="-1,0,-1,-6" />
-                <Setter Property="CornerRadius" Value="5,5,0,0" />
+                <Setter Property="CornerRadius" Value="30,30,0,0" />
                 <Setter Property="BorderThickness" Value="1" />
                 <Setter Property="BorderColor" Value="#E4E4E4" />
                 <Setter Property="BackgroundColor" Value="White" />
