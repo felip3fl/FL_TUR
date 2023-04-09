@@ -24,18 +24,14 @@ namespace FL_TUR.ViewModel
 
         public void ExibirResultadoTela(NumerosSorteadosClass numerosSorteadosClass)
         {
+            var contador = 1;
+            numeros.Clear();
 
-            
-
-            //var contador = 1;
-
-            //foreach (var numeroSorteado in numerosSorteadosClass.getListNumerosSorteadosOrdeado())
-            //{
-
-            //    grid.Children.Cast<Label>().Where(a => a.ClassId == contador.ToString()).FirstOrDefault();
-            //    label.Text = numeroSorteado.ToString("00");
-            //    contador++;
-            //}
+            foreach (var numeroSorteado in numerosSorteadosClass.getListNumerosSorteadosOrdeado())
+            {
+                numeros.Add(numeroSorteado.ToString("00"));
+            }
+            OnPropertyChanged("numeros");
         }
 
         #region INotifyPropertyChanged

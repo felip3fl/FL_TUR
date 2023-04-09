@@ -14,11 +14,18 @@ namespace FL_TUR.Control
     public partial class ResultadoSorteioView : ContentView
     {
         Grid gridResultado;
+        public string Numeros = "";
+        ViewModel.ResultadoSorteioViewModel resultadoSorteio = new ViewModel.ResultadoSorteioViewModel();
 
         public ResultadoSorteioView()
         {
             InitializeComponent();
-            BindingContext = new ViewModel.ResultadoSorteioViewModel();
+            BindingContext = resultadoSorteio;
+        }
+
+        public void ExibirResultadoTela(NumerosSorteadosClass resultado)
+        {
+            resultadoSorteio.ExibirResultadoTela(resultado);
         }
     }
 }

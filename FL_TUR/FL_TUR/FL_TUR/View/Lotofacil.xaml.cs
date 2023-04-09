@@ -90,7 +90,7 @@ namespace FL_TUR.View
             var texto = numerosSorteados.getNumerosSorteadosOrdeado();
 
             NumerosSorteioView.Atualizar(numerosSorteados);
-            //ResultadoSorteioView.ExibirResultadoTela(numerosSorteados);
+            ResultadoSorteioView.ExibirResultadoTela(numerosSorteados);
         }
     }
 }
