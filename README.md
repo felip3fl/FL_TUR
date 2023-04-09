@@ -13,7 +13,7 @@
 
 
 <h3 align="left">
-  <img src="https://user-images.githubusercontent.com/20684484/230697271-af04059f-01c1-466f-9f49-94ad4cbe2344.png" width="50%">
+  <img src="https://user-images.githubusercontent.com/20684484/230786111-4f7021e2-f7f0-4ab1-b43a-f0605e00efc3.png" width="50%">  
 </h3>
  
 <BR>
