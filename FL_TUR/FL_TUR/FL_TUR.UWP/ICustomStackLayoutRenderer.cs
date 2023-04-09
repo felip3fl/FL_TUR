@@ -20,15 +20,15 @@ namespace FL_TUR.UWP
             base.OnElementChanged(e);
             base.UpdateBackgroundColor();
 
-            if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.UI.Xaml.Media.AcrylicBrush"))
-            {
-                var brush = Windows.UI.Xaml.Application.Current.Resources["SystemControlAltHighAcrylicWindowBrush"] as AcrylicBrush;
-                brush.TintColor = Colors.White;
-                brush.TintOpacity = 0.8;
-                var fallbackColor = brush.FallbackColor;
-                var source = brush.BackgroundSource;
-                this.Background = brush;
-            }
+            //if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.UI.Xaml.Media.AcrylicBrush"))
+            //{
+            //    var brush = Windows.UI.Xaml.Application.Current.Resources["SystemControlAltHighAcrylicWindowBrush"] as AcrylicBrush;
+            //    var tint = brush.TintColor;
+            //    var opacity = brush.TintOpacity;
+            //    var fallbackColor = brush.FallbackColor;
+            //    var source = brush.BackgroundSource;
+            //    this.Background = brush;
+            //}
 
             CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
             ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
