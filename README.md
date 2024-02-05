@@ -1,8 +1,8 @@
-<h3 align="center"> <img src="https://user-images.githubusercontent.com/20684484/230697325-16b1fb2d-d599-4a49-b5b8-17bf1d86113c.png" width="170px" align="center" ><BR><BR>TUR<BR><BR>
+<h3 align="center"> <img src="https://user-images.githubusercontent.com/20684484/230697325-16b1fb2d-d599-4a49-b5b8-17bf1d86113c.png" width="160px" align="center" ><BR><BR>TUR<BR><BR>
 
 <p align="center">
-<img src="https://img.shields.io/badge/STATUS-FINALIZADO-purple">
-<img src="https://img.shields.io/badge/PROJECT%20VERSION-1.0.0-purple">
+<img src="https://img.shields.io/badge/STATUS-FINALIZADO-4b1762">
+<img src="https://img.shields.io/badge/PROJECT%20VERSION-1.0.0-a341ba">
 </p>
 
 </h3>
